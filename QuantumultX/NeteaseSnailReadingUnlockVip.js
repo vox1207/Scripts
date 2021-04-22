@@ -3,7 +3,7 @@ Netease snail reading unlock vip
 By yxiaocai & JO2EY & NobyDa
 Quantumult X:
 [rewrite_local]
-^https?://p\.du\.163\.com/gain/readtime/info.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js
+^https?://p\.du\.163\.com/gain/readtime/info.json url script-response-body https://raw.githubusercontent.com/Vaokgxi/Vox/main/QuantumultX/NeteaseSnailReadingUnlockVip.js
 */
 
 var body = $response.body;
