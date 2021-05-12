@@ -56,8 +56,8 @@
           "desc": "经度，可以关闭MITM获取位置，手动设置"
         }
       ],
-      "author": "@Vox",
-      "repo": "https://github.com/Vaokgxi/Vox/tree/main/QuantumultX",
+      "author": "@Peng-YM",
+      "repo": "https://github.com/Peng-YM/QuanX",
       "icons": [
         "https://raw.githubusercontent.com/Orz-3/mini/master/caiyun.png",
         "https://raw.githubusercontent.com/Orz-3/task/master/caiyun.png"
