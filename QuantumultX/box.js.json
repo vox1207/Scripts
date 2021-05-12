@@ -2,8 +2,8 @@
   "id": "vox.app.sub",
   "name": "Vox Subscription",
   "author": "@Vox",
-  "icon": "https://avatars2.githubusercontent.com/u/21050064?s=460&u=40a74913dd0a3d00670d05148c3a08c787470021&v=4",
-  "repo": "https://github.com/Peng-YM/QuanX",
+  "icon": "https://avatars.githubusercontent.com/u/83031055?s=400&u=25e44cb876c65662b4daa488c301d58cb37611da&v=4",
+  "repo": "https://github.com/Vaokgxi/Vox/tree/main/QuantumultX",
   "apps": [ 
     {
       "id": "Caiyun",
