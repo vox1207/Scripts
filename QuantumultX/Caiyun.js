@@ -131,7 +131,6 @@ async function scheduler() {
   await query();
   weatherAlert();
   realtimeWeather();
-  dailyForcast();
   // hourlyForcast();
   // dailyForcast();
 }
