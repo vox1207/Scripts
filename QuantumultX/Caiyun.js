@@ -303,7 +303,7 @@ function dailyForcast() {
   const daily = data.daily;
   const keypoint = data.forecast_keypoint;
 
-  let daylySkycon = "[未来5天]\n";
+  let dailySkycon = "[未来5天]\n";
   for (let i = 0; i < 5; i++) {
     const skycon = daily.skycon[i];
     const dt = new Date(skycon.datetime);
