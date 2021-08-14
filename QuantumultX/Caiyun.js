@@ -305,7 +305,7 @@ function dailyForcast() {
 
   let dailySkycon = "[未来5天]\n";
   for (let i = 0; i < 5; i++) {
-    const skycon = daily.skycon.[i];
+    const skycon = daily.skycon[i];
     const dt = new Date(skycon.datetime);
     const now = dt.getDate() + 1;
     dt.setDate(dt.getDate() + 1);
@@ -316,7 +316,7 @@ function dailyForcast() {
 
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
-    `${mapSkycon(daily.skycon.value)[0]} ${daily.temperature} ℃  🌤 空气质量 ${
+    `${mapSkycon(skycon.value)[0]} ${daily.temperature} ℃  🌤 空气质量 ${
       daily.pm25.description.chn
     }`,
     `🔱 ${keypoint}
