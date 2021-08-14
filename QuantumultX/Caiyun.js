@@ -284,6 +284,7 @@ ${alertInfo}${hourlySkycon}
   );
 }
 
+/**
 function dailyForcast() {
   const data = $.weather.result;
   const address = $.address;
@@ -334,6 +335,7 @@ ${alertInfo}${dailySkycon}
     }
   );
 }
+*/
 
 function rainfallAlert() {
   const data = $.weather.minutely;
