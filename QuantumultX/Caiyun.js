@@ -285,7 +285,7 @@ ${alertInfo}${hourlySkycon}
 }
 
 function dailyForcast() {
-  const data = $.weather.result.daily;
+  const data = $.weather.result;
   const address = $.address;
   
   const alert = data.alert;
