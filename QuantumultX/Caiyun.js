@@ -335,6 +335,29 @@ ${alertInfo}${dailySkycon}
   );
 }
 
+function rainfallAlert() {
+  const data = $.weather.minutely;
+  const address = $.address;
+  const minutely = $.read("minutely") || [];
+  
+  if (data.status === "ok") {
+    data.content.forEach((minutely) => {
+      if (minutely.indexOf(minutely.probability) != 0.0) {
+        $.notify(
+          `[彩云天气] ${address.city} ${address.district} ${address.street}`,
+          minutely.title,
+          minutely.description
+        );
+        minutely.push(minutely.probability);
+        if (minutely.length > 10) {
+          minutely.shift();
+        }
+        $.write(minutely, "minutely");
+      }
+    });
+  }
+}
+
 /************************** 天气对照表 *********************************/
 
 function mapAlertCode(code) {
