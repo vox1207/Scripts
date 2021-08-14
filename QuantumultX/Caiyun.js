@@ -309,7 +309,7 @@ function dailyForcast() {
     const dt = new Date(skycon.datetime);
     const now = dt.getDate() + 1;
     dt.setDate(dt.getDate() + 1);
-    hourlySkycon +=
+    dailySkycon +=
       `${now}-${dt.getDate() + 1}日 ${mapSkycon(skycon.value)[0]}` +
       (i == 4 ? "" : "\n");
   }
