@@ -131,6 +131,7 @@ async function scheduler() {
   await query();
   weatherAlert();
   realtimeWeather();
+  dailyForcast();
   // hourlyForcast();
   // dailyForcast();
 }
@@ -283,7 +284,6 @@ ${alertInfo}${hourlySkycon}
   );
 }
 
-/**
 function dailyForcast() {
   const data = $.weather.result;
   const address = $.address;
@@ -334,7 +334,6 @@ ${alertInfo}${dailySkycon}
     }
   );
 }
-*/
 
 function rainfallAlert() {
   const data = $.weather.minutely;
