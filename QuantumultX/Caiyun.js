@@ -316,7 +316,7 @@ function dailyForcast() {
 
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
-    `${mapSkycon(daily.skycon.value)[0]} ${daily.temperature} ℃  🌤 空气质量 ${
+    `${mapSkycon(skycon.value)[0]} ${daily.temperature} ℃  🌤 空气质量 ${
       daily.pm25.description.chn
     }`,
     `🔱 ${keypoint}
