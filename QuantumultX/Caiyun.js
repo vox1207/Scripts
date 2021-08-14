@@ -131,6 +131,7 @@ async function scheduler() {
   await query();
   weatherAlert();
   realtimeWeather();
+  dailyForcast();
   // hourlyForcast();
   // dailyForcast();
 }
@@ -283,7 +284,56 @@ ${alertInfo}${hourlySkycon}
   );
 }
 
-function dailyForcast() {}
+function dailyForcast() {
+  const data = $.weather.result.daily;
+  const address = $.address;
+  
+  const alert = data.alert;
+  const alertInfo =
+    alert.content.length == 0
+      ? ""
+      : alert.content.reduce((acc, curr) => {
+          if (curr.status === "预警中") {
+            return acc + "\n" + mapAlertCode(curr.code) + "预警";
+          } else {
+            return acc;
+          }
+        }, "[预警]") + "\n\n";
+
+  const daily = data.daily;
+  const keypoint = data.forecast_keypoint;
+
+  let daylySkycon = "[未来5天]\n";
+  for (let i = 0; i < 5; i++) {
+    const skycon = daily.skycon[i];
+    const dt = new Date(skycon.datetime);
+    const now = dt.getDate() + 1;
+    dt.setDate(dt.getDate() + 1);
+    hourlySkycon +=
+      `${now}-${dt.getDate() + 1}日 ${mapSkycon(skycon.value)[0]}` +
+      (i == 4 ? "" : "\n");
+  }
+
+  $.notify(
+    `[彩云天气] ${address.city} ${address.district} ${address.street}`,
+    `${mapSkycon(daily.skycon)[0]} ${daily.temperature} ℃  🌤 空气质量 ${
+      daily.pm25.description.chn
+    }`,
+    `🔱 ${keypoint}
+🌧 降水强度${daily.precipitation} ${
+      daily.apparent_temperature
+    } ℃  💧 湿度 ${(daily.humidity * 100).toFixed(0)}%
+🌞 紫外线 ${daily.life_index.ultraviolet.desc} 💨 ${mapWind(
+      daily.wind.speed,
+    )}
+
+${alertInfo}${dailySkycon}
+`,
+    {
+      "media-url": `${mapSkycon(daily.skycon)[1]}`,
+    }
+  );
+}
 
 /************************** 天气对照表 *********************************/
 
