@@ -1,6 +1,6 @@
 //简单思路就是 获取ip再获取天气信息
-const locationKey = "XXXXXXXXXXXXX"
-const weatherKey = "XXXXXXXXXXXX"
+const locationKey = "TFVBZ-WYGLW-TNORX-OYSUB-MNAWJ-FCBES"
+const weatherKey = "o2C7VVN18yN2nB6K"
 
 const apiList = {
     location:"https://apis.map.qq.com/ws"
