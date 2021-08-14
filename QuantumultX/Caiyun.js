@@ -305,7 +305,7 @@ function dailyForcast() {
 
   let dailySkycon = "[未来5天]\n";
   for (let i = 0; i < 5; i++) {
-    const skycon = daily.skycon.value[i];
+    const skycon = daily.skycon.[i];
     const dt = new Date(skycon.datetime);
     const now = dt.getDate() + 1;
     dt.setDate(dt.getDate() + 1);
