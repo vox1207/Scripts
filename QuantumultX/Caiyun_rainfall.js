@@ -234,6 +234,18 @@ function dailyForcast() {
   const data = $.weather.result;
   const address = $.address;
 
+  const alert = data.alert;
+  const alertInfo =
+    alert.content.length == 0
+      ? ""
+      : alert.content.reduce((acc, curr) => {
+          if (curr.status === "预警中") {
+            return acc + "\n" + mapAlertCode(curr.code) + "预警";
+          } else {
+            return acc;
+          }
+        }, "[预警]") + "\n\n";
+  
   const realtime = data.realtime;
   const keypoint = data.forecast_keypoint;
 
