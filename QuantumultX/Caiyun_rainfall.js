@@ -306,6 +306,21 @@ function rainfallAlert() {
 
   const hourly = data.hourly;
 
+  const intensity = minutely.probability
+  
+  // 雷达降 水/雪 强度 --> skycon
+  function mapPrecipitation(intensity) {
+    if (0.031 < intensity && intensity < 0.25) {
+      return "LIGHT";
+    } else if (intensity < 0.35) {
+      return "MODERATE";
+    } else if (intensity < 0.48) {
+      return "HEADY";
+    } else if (intensity >= 0.48) {
+      return "STORM";
+    }
+  }
+  
   let hourlySkycon = "[未来3小时]\n";
   for (let i = 0; i < 3; i++) {
     const skycon = hourly.skycon[i];
