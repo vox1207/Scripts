@@ -300,7 +300,7 @@ function rainfallAlert() {
           }
         }, "[预警]") + "\n\n";
 */
-  const minutely = data.minutely;
+  const realtime = data.realtime;
   const keypoint = data.forecast_keypoint;
 
   const hourly = data.hourly;
