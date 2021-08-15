@@ -224,12 +224,12 @@ function rainfallAlert() {
 🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(
       realtime.wind.speed,
       realtime.wind.direction
-    )}`,
-`
-未来0.5小时降水概率 ${minutely.probability[0]}
-未来 1 小时降水概率 ${minutely.probability[1]}
-未来1.5小时降水概率 ${minutely.probability[2]}
-未来 2 小时降水概率 ${minutely.probability[3]}
+    )}
+    
+未来0.5小时降水概率 ${minutely.probability[0]}
+未来 1 小时降水概率 ${minutely.probability[1]}
+未来1.5小时降水概率 ${minutely.probability[2]}
+未来 2 小时降水概率 ${minutely.probability[3]}
 `,
       {
         "media-url": `${mapSkycon(realtime.skycon)[1]}`,
