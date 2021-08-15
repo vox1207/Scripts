@@ -256,7 +256,7 @@ function dailyForcast() {
     const skycon = daily.skycon[i];
     const dt = new Date(skycon.date);
     
-    const now = dt.getDate();
+    const now = dt.getDate() - 1;
     dt.setDate(dt.getDate() + 1);
     dailySkycon +=
       `${dt.getDate()}日 ${mapSkycon(skycon.value)[0]}` +
