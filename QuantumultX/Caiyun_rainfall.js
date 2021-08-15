@@ -303,7 +303,7 @@ function dailyForcast() {
 
   let dailySkycon = "[未来一周]\n";
   for (let i = 0; i < 7; i++) {
-    const skycon = hourly.skycon[i];
+    const skycon = daily.skycon[i];
     const dt = new Date(skycon.date);
     const now = dt.getDate() + 1;
     dt.setDate(dt.getDate() + 1);
