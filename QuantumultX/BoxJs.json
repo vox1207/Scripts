@@ -58,12 +58,9 @@
       ],
       "author": "@Vox",
       "repo": "https://github.com/Vaokgxi/Vox/tree/main/QuantumultX",
-      "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/caiyun.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/caiyun.png"
-      ],
+      "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Color/caiyun.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/caiyun.png"],
       "script": "https://raw.githubusercontent.com/Vaokgxi/Vox/main/QuantumultX/ColourfulClouds/DailyForcast.js"
-    }
+    };
     {
       "id": "RainfallAlert",
       "name": "降雨提醒",
@@ -115,10 +112,7 @@
           "desc": "经度，可以关闭MITM获取位置，手动设置"
         }
       ],
-      "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/weather.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/weather.png"
-      ],
+      "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Color/weather.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/weather.png"],
       "script": "https://raw.githubusercontent.com/Vaokgxi/Vox/main/QuantumultX/ColourfulClouds/RainfallAlert.js"
     }
   ]  
