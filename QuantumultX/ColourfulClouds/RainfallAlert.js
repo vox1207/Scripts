@@ -218,7 +218,14 @@ function rainfallAlert() {
       realtime.air_quality.description.chn
     }`,
     `🔱 ${keypoint}
-
+🌡 体感${realtime.life_index.comfort.desc} ${
+      realtime.apparent_temperature
+    } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
+🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(
+      realtime.wind.speed,
+      realtime.wind.direction
+    )}`,
+`
 未来0.5小时降水概率 ${minutely.probability[0]}
 未来 1 小时降水概率 ${minutely.probability[1]}
 未来1.5小时降水概率 ${minutely.probability[2]}
