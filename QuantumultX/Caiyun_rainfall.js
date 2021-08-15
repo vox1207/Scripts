@@ -287,7 +287,7 @@ ${alertInfo}${dailySkycon}
 function rainfallAlert() {
   const data = $.weather.result;
   const address = $.address;
-/*
+
   const alert = data.alert;
   const alertInfo =
     alert.content.length == 0
@@ -299,7 +299,7 @@ function rainfallAlert() {
             return acc;
           }
         }, "[预警]") + "\n\n";
-*/
+  
   const realtime = data.realtime;
   const minutely = data.minutely;
   const keypoint = data.forecast_keypoint;
