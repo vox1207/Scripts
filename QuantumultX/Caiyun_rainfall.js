@@ -305,7 +305,7 @@ function rainfallAlert() {
   const keypoint = data.forecast_keypoint;
 
   const hourly = data.hourly;
-
+  //
   const intensity = minutely.probability
   
   // 雷达降 水/雪 强度 --> skycon
@@ -320,18 +320,8 @@ function rainfallAlert() {
       return "STORM";
     }
   }
-  
-  let hourlySkycon = "[未来3小时]\n";
-  for (let i = 0; i < 3; i++) {
-    const skycon = hourly.skycon[i];
-    const dt = new Date(skycon.datetime);
-    const now = dt.getHours() + 1;
-    dt.setHours(dt.getHours() + 1);
-    hourlySkycon +=
-      `${now}-${dt.getHours() + 1}时 ${mapSkycon(skycon.value)[0]}` +
-      (i == 2 ? "" : "\n");
-  }
-
+   let realtimeSkycon = "[降水提醒]";
+  //
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
     `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${
@@ -346,7 +336,7 @@ function rainfallAlert() {
 未来一小时降水强度 ${minutely.precipitation}
 未来两小时降水强度 ${minutely.precipitation_2h}
 
-${alertInfo}${hourlySkycon}
+${alertInfo}${"[降水提醒]"}
 `,
     {
       "media-url": `${mapSkycon(realtime.skycon)[1]}`,
