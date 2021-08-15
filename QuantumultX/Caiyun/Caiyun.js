@@ -283,7 +283,7 @@ ${alertInfo}${dailySkycon}
     }
   );
 }
-  
+/*  
 function rainfallAlert() {
   const data = $.weather.result;
   const address = $.address;
@@ -313,6 +313,7 @@ function rainfallAlert() {
     );
   }
 }
+*/
 /************************** 天气对照表 *********************************/
 
 function mapAlertCode(code) {
