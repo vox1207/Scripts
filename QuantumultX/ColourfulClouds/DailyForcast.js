@@ -248,19 +248,18 @@ function dailyForcast() {
   
   const realtime = data.realtime;
   const keypoint = data.forecast_keypoint;
-
   const daily = data.daily;
 
   let dailySkycon = "[未来一周]\n";
   for (let i = 0; i < 7; i++) {
     const skycon = daily.skycon[i];
-    const dt = new Date(skycon.date) - 1;
+    const dt = new Date(skycon.date);
     
     const now = dt.getDate() ;
-    dt.setDate(dt.getDate() + 1);
     dailySkycon +=
       `${dt.getDate()}日 ${mapSkycon(skycon.value)[0]}` +
       (i == 6 ? "" : "\n");
+    dt.setDate(dt.getDate() + 1);
   }
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
