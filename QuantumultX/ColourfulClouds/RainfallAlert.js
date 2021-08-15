@@ -1,16 +1,15 @@
 /**
 彩云天气 v0.1 alpha
-@author: Peng-YM
-更新地址：https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js
+@author: modify by vox from Peng-YM
+更新地址：https://raw.githubusercontent.com/Vaokgxi/Vox/main/QuantumultX/ColourfulClouds/RainfallAlert.js
  *
 功能：
 √ 自动定位
 √ 异常天气预警
 √ 实时天气预报
 
-TODO:
-- 降雨提醒
-- 每日睡前预报
+√ 降雨提醒 -- 本脚本
+√ 每日睡前预报 -- DailyForcast.js
 
 配置：
 1️⃣ 配置自动定位
@@ -19,7 +18,7 @@ TODO:
 [MITM]
 hostname=weather-data.apple.com, api.weather.com
 [rewrite_local]
-https:\/\/((weather-data\.apple)|(api.weather))\.com url script-request-header https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js
+https:\/\/((weather-data\.apple)|(api.weather))\.com url script-request-header https://raw.githubusercontent.com/Vaokgxi/Vox/main/QuantumultX/ColourfulClouds/RainfallAlert.js
 
 (2). Loon
 [MITM]
@@ -36,7 +35,7 @@ type=http-request, pattern=https:\/\/((weather-data\.apple)|(api.weather))\.com,
 (1) 打开定位服务
 (2) 选择天气，设置永远允许天气访问位置信息，并允许使用精确位置。
 此时，打开系统天气应用，会提示获取位置成功，如果没有提示，请确认1️⃣是否配置正确。
-3️⃣ 配置cron任务如：10 8-22/2 * * *
+3️⃣ 配置cron任务如：0 7,22 * * *
 4️⃣ 打开box.js设置彩云令牌(不是链接！！！）即可。
 */
 
