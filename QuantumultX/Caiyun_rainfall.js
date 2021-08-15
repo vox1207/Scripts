@@ -230,7 +230,7 @@ function weatherAlert() {
   }
 }
 
-function rainfallAlert() {
+function dailyForcast() {
   const data = $.weather.result;
   const address = $.address;
 
