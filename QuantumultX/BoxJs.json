@@ -6,7 +6,7 @@
   "repo": "https://github.com/Vaokgxi/Vox/tree/main/QuantumultX",
   "apps": [ 
     {
-      "id": "ColourfulClouds",
+      "id": "Caiyun",
       "name": "彩云天气",
       "keys": [
         "@caiyun.token.caiyun",
