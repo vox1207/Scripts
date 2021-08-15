@@ -249,6 +249,7 @@ function dailyForcast() {
   const realtime = data.realtime;
   const keypoint = data.forecast_keypoint;
   const daily = data.daily;
+  const minutely = data.minutely
 
   let dailySkycon = "[未来一周]\n";
   for (let i = 0; i < 7; i++) {
@@ -265,7 +266,7 @@ function dailyForcast() {
     `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${
       realtime.air_quality.description.chn
     }`,
-    `🔱 ${keypoint}
+    `🔱 ${keypoint}  🌂 未来2小时降水概率 ${minutely.probability[3]}
 🌡 体感${realtime.life_index.comfort.desc} ${
       realtime.apparent_temperature
     } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
