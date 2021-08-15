@@ -255,13 +255,14 @@ function dailyForcast() {
   for (let i = 0; i < 7; i++) {
     const skycon = daily.skycon[i];
     const dt = new Date(skycon.date);
+    const hours = dt.getHours();
     const now = dt.getDate() + 1;
     dt.setDate(dt.getDate() + 1);
     dailySkycon +=
       `${now}-${dt.getDate() + 1}时 ${mapSkycon(skycon.value)[0]}` +
       (i == 6 ? "" : "\n");
   }
-  if ({dt.getHours()} == 7 || 22) {
+  if (hours == 7 || 22) {
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
     `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${
