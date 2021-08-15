@@ -129,9 +129,9 @@ async function scheduler() {
     }月${now.getDate()}日${now.getHours()}时${now.getMinutes()}分`
   );
   await query();
+  weatherAlert();
   dailyForcast();
-  realtimeWeather();
-  dailyForcast();
+  rainfallAlert();
   // hourlyForcast();
   // weatherAlert();
 }
@@ -230,10 +230,10 @@ function weatherAlert() {
   }
 }
 
-function realtimeWeather() {
+function rainfallAlert() {
   const data = $.weather.result;
   const address = $.address;
-
+/*
   const alert = data.alert;
   const alertInfo =
     alert.content.length == 0
@@ -245,8 +245,8 @@ function realtimeWeather() {
             return acc;
           }
         }, "[预警]") + "\n\n";
-
-  const realtime = data.realtime;
+*/
+  const minutely = data.minutely;
   const keypoint = data.forecast_keypoint;
 
   const hourly = data.hourly;
@@ -268,13 +268,9 @@ function realtimeWeather() {
       realtime.air_quality.description.chn
     }`,
     `🔱 ${keypoint}
-🌡 体感${realtime.life_index.comfort.desc} ${
-      realtime.apparent_temperature
-    } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
-🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(
-      realtime.wind.speed,
-      realtime.wind.direction
-    )}
+🌡 未来两小时降水概率 ${mapPrecipitation(minutely.probability)} 
+💧 未来一小时降水强度 ${mapPrecipitation(minutely.precipitation)}
+🌞 未来两小时降水强度 ${mapPrecipitation(minutely.precipitation_2h)}
 
 ${alertInfo}${hourlySkycon}
 `,
