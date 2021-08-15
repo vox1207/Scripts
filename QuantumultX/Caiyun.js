@@ -129,11 +129,11 @@ async function scheduler() {
     }月${now.getDate()}日${now.getHours()}时${now.getMinutes()}分`
   );
   await query();
-  weatherAlert();
+  dailyForcast();
   realtimeWeather();
   dailyForcast();
   // hourlyForcast();
-  // dailyForcast();
+  // weatherAlert();
 }
 
 async function query() {
@@ -287,7 +287,7 @@ ${alertInfo}${hourlySkycon}
 function dailyForcast() {
   const data = $.weather.result;
   const address = $.address;
-  
+
   const alert = data.alert;
   const alertInfo =
     alert.content.length == 0
@@ -300,40 +300,44 @@ function dailyForcast() {
           }
         }, "[预警]") + "\n\n";
 
-  const daily = data.daily;
+  const realtime = data.realtime;
   const keypoint = data.forecast_keypoint;
 
-  let dailySkycon = "[未来5天]\n";
-  for (let i = 0; i < 5; i++) {
-    const skycon = daily.skycon[i];
-    const dt = new Date(skycon.datetime);
+  const daily = data.daily;
+
+  let dailySkycon = "[未来一周]\n";
+  for (let i = 0; i < 7; i++) {
+    const skycon = hourly.skycon[i];
+    const dt = new Date(skycon.date);
     const now = dt.getDate() + 1;
     dt.setDate(dt.getDate() + 1);
     dailySkycon +=
-      `${now}-${dt.getDate() + 1}日 ${mapSkycon(skycon.value)[0]}` +
-      (i == 4 ? "" : "\n");
+      `${now}-${dt.getDate() + 1}时 ${mapSkycon(skycon.value)[0]}` +
+      (i == 6 ? "" : "\n");
   }
 
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
-    `${mapSkycon(daily.skycon.value)[1]} ${daily.temperature} ℃  🌤 空气质量 ${
-      daily.pm25.description.chn
+    `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${
+      realtime.air_quality.description.chn
     }`,
     `🔱 ${keypoint}
-🌧 降水强度${daily.precipitation} ${
-      daily.apparent_temperature
-    } ℃  💧 湿度 ${(daily.humidity * 100).toFixed(0)}%
-🌞 紫外线 ${daily.life_index.ultraviolet.desc} 💨 ${mapWind(
-      daily.wind.speed,
+🌡 体感${realtime.life_index.comfort.desc} ${
+      realtime.apparent_temperature
+    } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
+🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(
+      realtime.wind.speed,
+      realtime.wind.direction
     )}
 
-${alertInfo}${dailySkycon}
+${alertInfo}${hourlySkycon}
 `,
     {
-      "media-url": `${mapSkycon(daily.skycon.value)[1]}`,
+      "media-url": `${mapSkycon(realtime.skycon)[1]}`,
     }
   );
 }
+
 
 function rainfallAlert() {
   const data = $.weather.minutely;
