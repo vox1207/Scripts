@@ -308,10 +308,13 @@ function dailyForcast() {
   for (let i = 0; i < 7; i++) {
     const skycon = daily.skycon[i];
     const dt = new Date(skycon.date);
+    
+  var weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+    
     const now = dt.getDate() + 1;
     dt.setDate(dt.getDate() + 1);
     dailySkycon +=
-      `${now}-${dt.getDate() + 1}时 ${mapSkycon(skycon.value)[0]}` +
+      `${now}-${dt.getDate() + 1}日 ${weekday[dt.getDate]} ${mapSkycon(skycon.value)[0]}` +
       (i == 6 ? "" : "\n");
   }
 
