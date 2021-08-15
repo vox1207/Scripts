@@ -132,6 +132,7 @@ async function scheduler() {
   weatherAlert();
   dailyForcast();
   rainfallAlert();
+  mapPrecipitation();
   // hourlyForcast();
   // weatherAlert();
 }
