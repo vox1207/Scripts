@@ -323,9 +323,13 @@ function rainfallAlert() {
       realtime.air_quality.description.chn
     }`,
     `🔱 ${keypoint}
-🌡 未来两小时降水概率 ${minutely.probability} 
-💧 未来一小时降水强度 ${minutely.precipitation}
-🌞 未来两小时降水强度 ${minutely.precipitation_2h}
+
+未来0.5小时降水概率 $.minutely.probability[0]
+未来 1 小时降水概率 $.minutely.probability[1]
+未来1.5小时降水概率 $.minutely.probability[2]
+未来 2 小时降水概率 $.minutely.probability[3]
+未来一小时降水强度 ${minutely.precipitation}
+未来两小时降水强度 ${minutely.precipitation_2h}
 
 ${alertInfo}${hourlySkycon}
 `,
