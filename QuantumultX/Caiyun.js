@@ -303,8 +303,13 @@ function dailyForcast() {
   const keypoint = data.forecast_keypoint;
 
   const daily = data.daily;
-  
-  var xData = function () { //获取当前时间的未来7天
+
+  let dailySkycon = "[未来一周]\n";
+  for (let i = 0; i < 7; i++) {
+    const skycon = daily.skycon[i];
+    const dt = new Date(skycon.date);
+   
+    var xData = function () { //获取当前时间的未来7天
     //var dd = new Date();//
     var arrDate = [];
     var arrWeek = new Array("日", "一", "二", "三", "四", "五", "六");
@@ -316,11 +321,6 @@ function dailyForcast() {
     console.log(arrDate)
     return arrDate;
 }();
-
-  let dailySkycon = "[未来一周]\n";
-  for (let i = 0; i < 7; i++) {
-    const skycon = daily.skycon[i];
-    const dt = new Date(skycon.date);
     
     const now = dt.getDate() + 1;
     dt.setDate(dt.getDate() + 1);
