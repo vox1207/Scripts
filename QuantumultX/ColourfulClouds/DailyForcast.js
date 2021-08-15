@@ -251,12 +251,12 @@ function dailyForcast() {
 
   const daily = data.daily;
 
-  let dailySkycon = "[未来一周]";
+  let dailySkycon = "[未来一周]\n";
   for (let i = 0; i < 7; i++) {
     const skycon = daily.skycon[i];
     const dt = new Date(skycon.date);
     
-    const now = dt.getDate() + 1;
+    const now = dt.getDate();
     dt.setDate(dt.getDate() + 1);
     dailySkycon +=
       `${now}-${dt.getDate() + 1}日 ${mapSkycon(skycon.value)[0]}` +
