@@ -254,9 +254,9 @@ function dailyForcast() {
   let dailySkycon = "[未来一周]\n";
   for (let i = 0; i < 7; i++) {
     const skycon = daily.skycon[i];
-    const dt = new Date(skycon.date);
+    const dt = new Date(skycon.date) - 1;
     
-    const now = dt.getDate() - 1;
+    const now = dt.getDate() ;
     dt.setDate(dt.getDate() + 1);
     dailySkycon +=
       `${dt.getDate()}日 ${mapSkycon(skycon.value)[0]}` +
