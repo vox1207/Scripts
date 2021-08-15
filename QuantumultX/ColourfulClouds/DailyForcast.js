@@ -131,7 +131,7 @@ async function scheduler() {
   await query();
   weatherAlert();
   dailyForcast();
-  rainfallAlert();
+  // rainfallAlert();
   // hourlyForcast();
   // weatherAlert();
 }
