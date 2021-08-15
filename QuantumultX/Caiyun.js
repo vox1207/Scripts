@@ -315,7 +315,7 @@ function dailyForcast() {
     var arrWeek = new Array("日", "一", "二", "三", "四", "五", "六");
     for(var i = 0; i < 7; i++){
         //dd.setDate(dt.getDate()+1);  //此处为包括今天的未来七天
-        arrDate.push(dt.getDate() + '日' + '星期' + arrWeek[dd.getDay()]);
+        arrDate.push(dt.getDate() + '日' + '星期' + arrWeek[dt.getDay()]);
         dt.setDate(dt.getDate()+1);  //此处为不包括今天的未来七天
     }
     console.log(arrDate)
