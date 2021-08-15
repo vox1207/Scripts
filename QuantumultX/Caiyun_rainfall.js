@@ -292,6 +292,7 @@ function rainfallAlert() {
   const minutely = data.minutely;
   const keypoint = data.forecast_keypoint;
 
+  if (minutely.probability[3] != 0 && minutely.probability[2] != 0 && minutely.probability[1] != 0 && minutely.probability[0] != 0) {
   $.notify(
     `[降水提醒] ${address.city} ${address.district} ${address.street}`,
     `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${
@@ -306,12 +307,12 @@ function rainfallAlert() {
 未来一小时降水强度 ${minutely.precipitation}
 未来两小时降水强度 ${minutely.precipitation_2h}
 `,
-    {
-      "media-url": `${mapSkycon(realtime.skycon)[1]}`,
-    }
-  );
+      {
+        "media-url": `${mapSkycon(realtime.skycon)[1]}`,
+      }
+    );
+  }
 }
-
 /************************** 天气对照表 *********************************/
 
 function mapAlertCode(code) {
