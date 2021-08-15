@@ -301,6 +301,7 @@ function rainfallAlert() {
         }, "[预警]") + "\n\n";
 */
   const realtime = data.realtime;
+  const minutely = data.minutely;
   const keypoint = data.forecast_keypoint;
 
   const hourly = data.hourly;
