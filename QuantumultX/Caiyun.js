@@ -308,24 +308,11 @@ function dailyForcast() {
   for (let i = 0; i < 7; i++) {
     const skycon = daily.skycon[i];
     const dt = new Date(skycon.date);
-   
-    var xData = function () { //获取当前时间的未来7天
-    //var dd = new Date();//
-    var arrDate = [];
-    var arrWeek = new Array("日", "一", "二", "三", "四", "五", "六");
-    for(var i = 0; i < 7; i++){
-        //dd.setDate(dt.getDate()+1);  //此处为包括今天的未来七天
-        arrDate.push(dt.getDate() + '日' + '星期' + arrWeek[dt.getDay()]);
-        dt.setDate(dt.getDate()+1);  //此处为不包括今天的未来七天
-    }
-    console.log(arrDate)
-    return arrDate;
-}();
     
     const now = dt.getDate() + 1;
     dt.setDate(dt.getDate() + 1);
     dailySkycon +=
-      `${now}-${dt.getDate() + 1}日 ${arrWeek[dt.getDay()]} ${mapSkycon(skycon.value)[0]}` +
+      `${now}-${dt.getDate() + 1}日 ${mapSkycon(skycon.value)[0]}` +
       (i == 6 ? "" : "\n");
   }
 
