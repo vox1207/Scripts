@@ -283,7 +283,7 @@ ${alertInfo}${dailySkycon}
     }
   );
 }
-/*  
+/**  
 function rainfallAlert() {
   const data = $.weather.result;
   const address = $.address;
@@ -292,20 +292,24 @@ function rainfallAlert() {
   const minutely = data.minutely;
   const keypoint = data.forecast_keypoint;
 
-  if (minutely.probability[3] != 0 && minutely.probability[2] != 0 && minutely.probability[1] != 0 && minutely.probability[0] != 0) {
+  if (minutely.probability[0] != 0) {
   $.notify(
     `[降水提醒] ${address.city} ${address.district} ${address.street}`,
     `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${
       realtime.air_quality.description.chn
     }`,
     `🔱 ${keypoint}
-
-未来0.5小时降水概率 ${minutely.probability[0]}
-未来 1 小时降水概率 ${minutely.probability[1]}
-未来1.5小时降水概率 ${minutely.probability[2]}
-未来 2 小时降水概率 ${minutely.probability[3]}
-未来一小时降水强度 ${minutely.precipitation}
-未来两小时降水强度 ${minutely.precipitation_2h}
+🌡 体感${realtime.life_index.comfort.desc} ${
+      realtime.apparent_temperature
+    } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
+🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(
+      realtime.wind.speed,
+      realtime.wind.direction
+    )}
+🔴 未来 0.5 小时降水概率 ${minutely.probability[0]}
+🟠 未来  1  小时降水概率 ${minutely.probability[1]}
+🟡 未来 1.5 小时降水概率 ${minutely.probability[2]}
+🟢 未来  2  小时降水概率 ${minutely.probability[3]}
 `,
       {
         "media-url": `${mapSkycon(realtime.skycon)[1]}`,
