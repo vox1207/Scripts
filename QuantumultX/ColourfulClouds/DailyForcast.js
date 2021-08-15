@@ -257,7 +257,7 @@ function dailyForcast() {
     const dt = new Date(skycon.date);
     
     dailySkycon +=
-      `${dt.getDate()}日 ${daily.temperature.max} ${mapSkycon(skycon.value)[0]}` +
+      `${dt.getDate()}日 ${mapSkycon(skycon.value)[0]}` +
       (i == 6 ? "" : "\n");
     dt.setDate(dt.getDate() + 1);
   }
