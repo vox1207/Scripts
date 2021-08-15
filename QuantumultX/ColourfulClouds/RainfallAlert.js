@@ -233,6 +233,82 @@ function rainfallAlert() {
   }
 }
 
+// 天气状况 --> 自然语言描述
+// icon来源：github@58xinian
+function mapSkycon(skycon) {
+  const map = {
+    CLEAR_DAY: [
+      "☀️ 日间晴朗",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/CLEAR_DAY.gif",
+    ],
+    CLEAR_NIGHT: [
+      "✨ 夜间晴朗",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/CLEAR_NIGHT.gif",
+    ],
+    PARTLY_CLOUDY_DAY: [
+      "⛅️ 日间多云",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/PARTLY_CLOUDY_DAY.gif",
+    ],
+    PARTLY_CLOUDY_NIGHT: [
+      "☁️ 夜间多云",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/PARTLY_CLOUDY_NIGHT.gif",
+    ],
+    CLOUDY: [
+      "☁️ 阴",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/CLOUDY.gif",
+    ],
+    LIGHT_HAZE: [
+      "😤 轻度雾霾",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/HAZE.gif",
+    ],
+    MODERATE_HAZE: [
+      "😤 中度雾霾",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/HAZE.gif",
+    ],
+    HEAVY_HAZE: [
+      "😤 重度雾霾",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/HAZE.gif",
+    ],
+    LIGHT_RAIN: [
+      "💧 小雨",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/LIGHT.gif",
+    ],
+    MODERATE_RAIN: [
+      "💦 中雨",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/MODERATE_RAIN.gif",
+    ],
+    HEAVY_RAIN: [
+      "🌧 大雨",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/STORM_RAIN.gif",
+    ],
+    STORM_RAIN: [
+      "⛈ 暴雨",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/STORM_RAIN.gif",
+    ],
+    LIGHT_SNOW: [
+      "🌨 小雪",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/LIGHT_SNOW.gif",
+    ],
+    MODERATE_SNOW: [
+      "❄️ 中雪",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/MODERATE_SNOW.gif",
+    ],
+    HEAVY_SNOW: [
+      "☃️ 大雪",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/HEAVY_SNOW.gif",
+    ],
+    STORM_SNOW: [
+      "⛄️暴雪",
+      "https://raw.githubusercontent.com/58xinian/icon/master/Weather/HEAVY_SNOW",
+    ],
+    FOG: ["🌫️ 雾"],
+    DUST: ["💨 浮尘"],
+    SAND: ["💨 沙尘"],
+    WIND: ["🌪 大风"],
+  };
+  return map[skycon];
+}
+
 function MYERR() {
   class TokenError extends Error {
     constructor(message) {
