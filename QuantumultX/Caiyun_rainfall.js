@@ -262,7 +262,6 @@ function dailyForcast() {
       `${now}-${dt.getDate() + 1}时 ${mapSkycon(skycon.value)[0]}` +
       (i == 6 ? "" : "\n");
   }
-  if (hours == 7 || 22) {
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
     `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${
@@ -279,11 +278,10 @@ function dailyForcast() {
 
 ${alertInfo}${dailySkycon}
 `,
-      {
-        "media-url": `${mapSkycon(realtime.skycon)[1]}`,
-      }
-    );
-  }
+    {
+      "media-url": `${mapSkycon(realtime.skycon)[1]}`,
+    }
+  );
 }
   
 function rainfallAlert() {
