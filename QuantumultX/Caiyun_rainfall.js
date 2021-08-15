@@ -287,25 +287,11 @@ ${alertInfo}${dailySkycon}
 function rainfallAlert() {
   const data = $.weather.result;
   const address = $.address;
-
-  const alert = data.alert;
-  const alertInfo =
-    alert.content.length == 0
-      ? ""
-      : alert.content.reduce((acc, curr) => {
-          if (curr.status === "预警中") {
-            return acc + "\n" + mapAlertCode(curr.code) + "预警";
-          } else {
-            return acc;
-          }
-        }, "[预警]") + "\n\n";
   
   const realtime = data.realtime;
   const minutely = data.minutely;
   const keypoint = data.forecast_keypoint;
 
-  const hourly = data.hourly;
-  //
   const intensity = minutely.probability
   
   // 雷达降 水/雪 强度 --> skycon
@@ -320,23 +306,19 @@ function rainfallAlert() {
       return "STORM";
     }
   }
-   let realtimeSkycon = "[降水提醒]";
-  //
   $.notify(
-    `[彩云天气] ${address.city} ${address.district} ${address.street}`,
+    `[降水提醒] ${address.city} ${address.district} ${address.street}`,
     `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${
       realtime.air_quality.description.chn
     }`,
     `🔱 ${keypoint}
 
-未来0.5小时降水概率 ${minutely.probability[0]}
+未来0.5小时降水概率 ${mapPrecipitation(intensity)[0]}
 未来 1 小时降水概率 ${minutely.probability[1]}
 未来1.5小时降水概率 ${minutely.probability[2]}
 未来 2 小时降水概率 ${minutely.probability[3]}
 未来一小时降水强度 ${minutely.precipitation}
 未来两小时降水强度 ${minutely.precipitation_2h}
-
-${alertInfo}${"[降水提醒]"}
 `,
     {
       "media-url": `${mapSkycon(realtime.skycon)[1]}`,
