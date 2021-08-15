@@ -132,7 +132,6 @@ async function scheduler() {
   weatherAlert();
   dailyForcast();
   rainfallAlert();
-  mapPrecipitation();
   // hourlyForcast();
   // weatherAlert();
 }
@@ -293,20 +292,6 @@ function rainfallAlert() {
   const minutely = data.minutely;
   const keypoint = data.forecast_keypoint;
 
-  const intensity = minutely.probability
-  
-  // 雷达降 水/雪 强度 --> skycon
-  function mapPrecipitation(intensity) {
-    if (0.031 < intensity && intensity < 0.25) {
-      return "LIGHT";
-    } else if (intensity < 0.35) {
-      return "MODERATE";
-    } else if (intensity < 0.48) {
-      return "HEADY";
-    } else if (intensity >= 0.48) {
-      return "STORM";
-    }
-  }
   $.notify(
     `[降水提醒] ${address.city} ${address.district} ${address.street}`,
     `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${
@@ -314,7 +299,7 @@ function rainfallAlert() {
     }`,
     `🔱 ${keypoint}
 
-未来0.5小时降水概率 ${mapPrecipitation(intensity)[0]}
+未来0.5小时降水概率 ${minutely.probability[0]}
 未来 1 小时降水概率 ${minutely.probability[1]}
 未来1.5小时降水概率 ${minutely.probability[2]}
 未来 2 小时降水概率 ${minutely.probability[3]}
