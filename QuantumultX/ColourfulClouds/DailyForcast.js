@@ -266,7 +266,8 @@ function dailyForcast() {
     `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${
       realtime.air_quality.description.chn
     }`,
-    `🔱 ${keypoint}  🌂 未来2小时降水概率 ${minutely.probability[3]}
+    `🔱 ${keypoint}  
+🌂 未来2小时降水概率 ${minutely.probability[3]}
 🌡 体感${realtime.life_index.comfort.desc} ${
       realtime.apparent_temperature
     } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
