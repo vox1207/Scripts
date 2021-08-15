@@ -259,7 +259,7 @@ function dailyForcast() {
     const now = dt.getDate();
     dt.setDate(dt.getDate() + 1);
     dailySkycon +=
-      `${now}-${dt.getDate() + 1}日 ${mapSkycon(skycon.value)[0]}` +
+      `${dt.getDate()}日 ${mapSkycon(skycon.value)[0]}` +
       (i == 6 ? "" : "\n");
   }
   $.notify(
