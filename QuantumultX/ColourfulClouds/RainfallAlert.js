@@ -233,6 +233,8 @@ function rainfallAlert() {
   }
 }
 
+/************************** 天气对照表 *********************************/
+
 // 天气状况 --> 自然语言描述
 // icon来源：github@58xinian
 function mapSkycon(skycon) {
