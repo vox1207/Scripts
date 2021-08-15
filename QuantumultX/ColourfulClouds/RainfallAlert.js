@@ -211,7 +211,7 @@ function rainfallAlert() {
   const minutely = data.minutely;
   const keypoint = data.forecast_keypoint;
 
-  if (minutely.probability[0] != 0) 
+  if (minutely.probability[0] != 0) {
   $.notify(
     `[降水提醒] ${address.city} ${address.district} ${address.street}`,
     `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${
