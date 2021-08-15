@@ -225,11 +225,11 @@ function rainfallAlert() {
       realtime.wind.speed,
       realtime.wind.direction
     )}
-    
-未来 0.5 小时降水概率 ${minutely.probability[0]}
-未来  1  小时降水概率 ${minutely.probability[1]}
-未来 1.5 小时降水概率 ${minutely.probability[2]}
-未来  2  小时降水概率 ${minutely.probability[3]}
+
+🔴 未来 0.5 小时降水概率 ${minutely.probability[0]}
+🟠 未来  1  小时降水概率 ${minutely.probability[1]}
+🟡 未来 1.5 小时降水概率 ${minutely.probability[2]}
+🟢 未来  2  小时降水概率 ${minutely.probability[3]}
 `,
       {
         "media-url": `${mapSkycon(realtime.skycon)[1]}`,
