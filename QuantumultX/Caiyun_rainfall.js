@@ -233,6 +233,48 @@ function weatherAlert() {
 function rainfallAlert() {
   const data = $.weather.result;
   const address = $.address;
+
+  const realtime = data.realtime;
+  const keypoint = data.forecast_keypoint;
+
+  const daily = data.daily;
+
+  let dailySkycon = "[未来一周]\n";
+  for (let i = 0; i < 7; i++) {
+    const skycon = daily.skycon[i];
+    const dt = new Date(skycon.date);
+    const now = dt.getDate() + 1;
+    dt.setDate(dt.getDate() + 1);
+    dailySkycon +=
+      `${now}-${dt.getDate() + 1}时 ${mapSkycon(skycon.value)[0]}` +
+      (i == 6 ? "" : "\n");
+  }
+
+  $.notify(
+    `[彩云天气] ${address.city} ${address.district} ${address.street}`,
+    `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${
+      realtime.air_quality.description.chn
+    }`,
+    `🔱 ${keypoint}
+🌡 体感${realtime.life_index.comfort.desc} ${
+      realtime.apparent_temperature
+    } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
+🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(
+      realtime.wind.speed,
+      realtime.wind.direction
+    )}
+
+${alertInfo}${hourlySkycon}
+`,
+    {
+      "media-url": `${mapSkycon(realtime.skycon)[1]}`,
+    }
+  );
+}
+
+function rainfallAlert() {
+  const data = $.weather.result;
+  const address = $.address;
 /*
   const alert = data.alert;
   const alertInfo =
@@ -278,84 +320,6 @@ ${alertInfo}${hourlySkycon}
       "media-url": `${mapSkycon(realtime.skycon)[1]}`,
     }
   );
-}
-
-function dailyForcast() {
-  const data = $.weather.result;
-  const address = $.address;
-
-  const alert = data.alert;
-  const alertInfo =
-    alert.content.length == 0
-      ? ""
-      : alert.content.reduce((acc, curr) => {
-          if (curr.status === "预警中") {
-            return acc + "\n" + mapAlertCode(curr.code) + "预警";
-          } else {
-            return acc;
-          }
-        }, "[预警]") + "\n\n";
-
-  const realtime = data.realtime;
-  const keypoint = data.forecast_keypoint;
-
-  const daily = data.daily;
-
-  let dailySkycon = "[未来一周]\n";
-  for (let i = 0; i < 7; i++) {
-    const skycon = daily.skycon[i];
-    const dt = new Date(skycon.date);
-    const now = dt.getDate() + 1;
-    dt.setDate(dt.getDate() + 1);
-    dailySkycon +=
-      `${now}-${dt.getDate() + 1}时 ${mapSkycon(skycon.value)[0]}` +
-      (i == 6 ? "" : "\n");
-  }
-
-  $.notify(
-    `[彩云天气] ${address.city} ${address.district} ${address.street}`,
-    `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${
-      realtime.air_quality.description.chn
-    }`,
-    `🔱 ${keypoint}
-🌡 体感${realtime.life_index.comfort.desc} ${
-      realtime.apparent_temperature
-    } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
-🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(
-      realtime.wind.speed,
-      realtime.wind.direction
-    )}
-
-${alertInfo}${hourlySkycon}
-`,
-    {
-      "media-url": `${mapSkycon(realtime.skycon)[1]}`,
-    }
-  );
-}
-
-
-function rainfallAlert() {
-  const data = $.weather.minutely;
-  const address = $.address;
-  const minutely = $.read("minutely") || [];
-  
-  if (data.status === "ok") {
-    data.content.forEach((minutely) => {
-      if (minutely.indexOf(minutely.probability) != 0.0) {
-        $.notify(
-          `[彩云天气] ${address.city} ${address.district} ${address.street}`,
-          minutely.title,
-          minutely.description
-        );
-        minutely.push(minutely.probability);
-        if (minutely.length > 10) {
-          minutely.shift();
-        }
-        $.write(minutely, "minutely");
-      }
-    });
-  }
 }
 
 /************************** 天气对照表 *********************************/
