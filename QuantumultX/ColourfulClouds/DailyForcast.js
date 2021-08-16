@@ -237,7 +237,7 @@ function dailyForcast() {
   const daily = data.daily;
   const minutely = data.minutely
 
-  let dailySkycon = "[未来一周]\n";
+  let dailySkycon = "[一周预报]\n";
   for (let i = 0; i < 7; i++) {
     const skycon = daily.skycon[i];
     const dt = new Date(skycon.date);
