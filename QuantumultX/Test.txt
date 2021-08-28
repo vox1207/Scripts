@@ -1,7 +1,7 @@
-shadowsocks=speed-else5.cheapvpn.site:5005, method=aes-256-cfb, password=V2efLnR3SJZr, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=139845:5p4eKz, obfs=http_simple, obfs-host=2539f139845.microsoft.com, fast-open=false, udp-relay=false, tag=LV2-★TB新加坡5005(高速体验)
+shadowsocks=speed-else5.cheapvpn.site:5005, method=aes-256-cfb, password=V2efLnR3SJZr, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=139845:5p4eKz, obfs=http_simple, obfs-host=2539f139845.microsoft.com, fast-open=false, udp-relay=false, tag=LV2-★TB新加坡5005(高速体验);
 
-shadowsocks=bm-us3.cheapvpn.site:6009, method=chacha20, password=43hG8LM6flih4A, ssr-protocol=auth_aes128_md5, ssr-protocol-param=1179:qtLKVC, obfs=tls1.2_ticket_auth, obfs-host=cde911179.microsoft.com, fast-open=false, udp-relay=false, tag=LV2-GYB-美国-6009
+shadowsocks=bm-us3.cheapvpn.site:6009, method=chacha20, password=43hG8LM6flih4A, ssr-protocol=auth_aes128_md5, ssr-protocol-param=1179:qtLKVC, obfs=tls1.2_ticket_auth, obfs-host=cde911179.microsoft.com, fast-open=false, udp-relay=false, tag=LV2-GYB-美国-6009;
 
-http=34.92.129.82:2021,fast-open=false, udp-relay=false, tag=网易云解锁节点 | 飞享一刻
+http=34.92.129.82:2021,fast-open=false, udp-relay=false, tag=网易云解锁节点 | 飞享一刻;
 
 http=43.128.37.178:2021,fast-open=false, udp-relay=false, tag=网易云解锁节点2 | 飞享一刻
