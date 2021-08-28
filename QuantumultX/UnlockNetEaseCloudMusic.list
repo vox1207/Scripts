@@ -1,6 +1,6 @@
-# U: https://raw.githubusercontent.com/O7Y0/Attached/main/UnblockNeteaseMusic/NeteaseCloudMusic.list
-# P: https://github.com/O7Y0/Attached/blob/main/UnblockNeteaseMusic
-# W: O7Y0
+# U: https://raw.githubusercontent.com/Vaokgxi/Vox/main/QuantumultX/UnlockNetEaseCloudMusic.list
+# P: https://github.com/Vaokgxi/Vox/edit/main/QuantumultX/UnlockNetEaseCloudMusic.list
+# W: @Vox cr from @O7Y0
 
 # REJECT
 HOST,admusicpic.music.126.net,REJECT
