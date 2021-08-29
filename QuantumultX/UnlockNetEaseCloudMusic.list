@@ -39,7 +39,6 @@ HOST,p7.music.126.net,Unlock NetEaseCloudMusic
 HOST,p8.music.126.net,Unlock NetEaseCloudMusic
 HOST,p9.music.126.net,Unlock NetEaseCloudMusic
 HOST,p10.music.126.net,Unlock NetEaseCloudMusic
-HOST-KEYWORD,netease,Unlock NetEaseCloudMusic
 
 #IP-CIDR
 IP-CIDR,39.105.63.80/32,Unlock NetEaseCloudMusic
