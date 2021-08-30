@@ -116,7 +116,7 @@ async function scheduler() {
   );
   await query();
   weatherAlert();
-  dailyForcast();
+  realtimeWeather();
   // rainfallAlert();
   // hourlyForcast();
   // weatherAlert();
@@ -216,7 +216,7 @@ function weatherAlert() {
   }
 }
 
-function dailyForcast() {
+function realtimeWeather() {
   const data = $.weather.result;
   const address = $.address;
 
@@ -234,9 +234,20 @@ function dailyForcast() {
   
   const realtime = data.realtime;
   const keypoint = data.forecast_keypoint;
+  const hourly = data.hourly;
   const daily = data.daily;
   const minutely = data.minutely
 
+  let hourlySkycon = "[未来3小时]\n";
+  for (let i = 0; i < 3; i++) {
+    const skycon = hourly.skycon[i];
+    const dt = new Date(skycon.datetime);
+    const now = dt.getHours() + 1;
+    dt.setHours(dt.getHours() + 1);
+    hourlySkycon +=
+      `${now}-${dt.getHours() + 1}时 ${mapSkycon(skycon.value)[0]}` +
+      (i == 2 ? "" : "\n");
+    
   let dailySkycon = "[一周预报]\n";
   for (let i = 0; i < 7; i++) {
     const skycon = daily.skycon[i];
@@ -262,7 +273,7 @@ function dailyForcast() {
       realtime.wind.direction
     )}
 
-${alertInfo}${dailySkycon}
+${alertInfo}${hourlySkycon}${dailySkycon}
 `,
     {
       "media-url": `${mapSkycon(realtime.skycon)[1]}`,
