@@ -237,7 +237,7 @@ function realtimeWeather() {
   const hourly = data.hourly;
   const daily = data.daily;
   const minutely = data.minutely
-/*
+
   let hourlySkycon = "[未来3小时]\n";
   for (let i = 0; i < 3; i++) {
     const skycon = hourly.skycon[i];
@@ -247,18 +247,18 @@ function realtimeWeather() {
     hourlySkycon +=
       `${now}-${dt.getHours() + 1}时 ${mapSkycon(skycon.value)[0]}` +
       (i == 2 ? "" : "\n");
-  }*/
-  
+  }
+  /*
   let dailySkycon = "[一周预报]\n";
   for (let i = 0; i < 7; i++) {
-    const dskycon = daily.skycon[i];
-    const ddt = new Date(skycon.date);
+    const skycon = daily.skycon[i];
+    const dt = new Date(skycon.date);
     
     dailySkycon +=
-      `${ddt.getDate()}日 ${mapSkycon(dskycon.value)[0]}` +
+      `${dt.getDate()}日 ${mapSkycon(skycon.value)[0]}` +
       (i == 6 ? "" : "\n");
-    ddt.setDate(ddt.getDate() + 1);*/
-  }
+    dt.setDate(dt.getDate() + 1);*/
+  }*/
   
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
@@ -275,7 +275,7 @@ function realtimeWeather() {
       realtime.wind.direction
     )}
 
-${alertInfo}${dailySkycon}
+${alertInfo}${hourlySkycon}
 `,
     {
       "media-url": `${mapSkycon(realtime.skycon)[1]}`,
