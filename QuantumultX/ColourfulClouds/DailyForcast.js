@@ -247,8 +247,8 @@ function realtimeWeather() {
     hourlySkycon +=
       `${now}-${dt.getHours() + 1}时 ${mapSkycon(skycon.value)[0]}` +
       (i == 2 ? "" : "\n");
-    
-  /*let dailySkycon = "[一周预报]\n";
+  };  
+  let dailySkycon = "[一周预报]\n";
   for (let i = 0; i < 7; i++) {
     const skycon = daily.skycon[i];
     const dt = new Date(skycon.date);
@@ -273,7 +273,7 @@ function realtimeWeather() {
       realtime.wind.direction
     )}
 
-${alertInfo}${hourlySkycon}
+${alertInfo}${hourlySkycon}${dailySkycon}
 `,
     {
       "media-url": `${mapSkycon(realtime.skycon)[1]}`,
