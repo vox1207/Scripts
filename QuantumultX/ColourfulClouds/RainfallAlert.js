@@ -206,9 +206,33 @@ function rainfallAlert() {
   const data = $.weather.result;
   const address = $.address;
   
+  const alert = data.alert;
+  const alertInfo =
+    alert.content.length == 0
+      ? ""
+      : alert.content.reduce((acc, curr) => {
+          if (curr.status === "预警中") {
+            return acc + "\n" + mapAlertCode(curr.code) + "预警";
+          } else {
+            return acc;
+          }
+        }, "[预警]") + "\n\n";
+  
   const realtime = data.realtime;
   const minutely = data.minutely;
   const keypoint = data.forecast_keypoint;
+  const hourly = data.hourly;
+  
+  let hourlySkycon = "[未来3小时]\n";
+  for (let i = 0; i < 3; i++) {
+    const skycon = hourly.skycon[i];
+    const dt = new Date(skycon.datetime);
+    const now = dt.getHours() + 1;
+    dt.setHours(dt.getHours() + 1);
+    hourlySkycon +=
+      `${now}-${dt.getHours() + 1}时 ${mapSkycon(skycon.value)[0]}` +
+      (i == 2 ? "" : "\n");
+  } 
 
   if (minutely.probability[0] != 0 || minutely.probability[3] != 0) {
   $.notify(
@@ -231,7 +255,7 @@ function rainfallAlert() {
 🟢 未来  2  小时降水概率 ${minutely.probability[3]}
 `,
       {
-        "media-url": `${mapSkycon(realtime.skycon)[1]}`,
+        "media-url": `${mapSkycon(hourlySkycon.skycon)[1]}`,
       }
     );
   }
