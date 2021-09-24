@@ -1,0 +1,38 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+  - {name: 61.14.210.242:32558, server: 61.14.210.242, port: 32558, type: ss, cipher: aes-256-gcm, password: gJYzm3TLbdL495ryQptaJXQk}
+  - {name: 212.102.44.86:42304, server: 212.102.44.86, port: 42304, type: ss, cipher: aes-256-gcm, password: p26v2JwhQVHDHsXk66fXt56r}
+  - {name: 66.115.177.143:50024, server: 66.115.177.143, port: 50024, type: ss, cipher: aes-256-gcm, password: b2jDPHUQxCNa2KmGHZjy7C4B}
+  - {name: 27.131.164.94:47027, server: 27.131.164.94, port: 47027, type: ss, cipher: aes-256-gcm, password: Vt5pBJFwdtNB26cJbTXxm88Z}
+  - {name: "", server: 198.200.51.28, port: 21045, type: vmess, uuid: 1d219570-0d1b-11ec-a57e-00163ca76936, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: " 2", server: 198.200.51.34, port: 37221, type: vmess, uuid: c70c1895-22ab-4661-83e7-c437137273f9, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: " 3", server: 3.36.48.102, port: 8080, type: vmess, uuid: ab0fbc0a-f6b8-4aa8-a2cc-1adccd5ecb9b, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /白嫖节点分享Q群262349039, ws-headers: {Host: 3.36.48.102}}
+  - {name: " 4", server: 54.178.67.40, port: 80, type: vmess, uuid: 00000000-0000-0000-0000-000000000001, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false}
+proxy-groups:
+  - name: Proxies
+    type: select
+    proxies:
+      - 61.14.210.242:32558
+      - 212.102.44.86:42304
+      - 66.115.177.143:50024
+      - 27.131.164.94:47027
+      - ""
+      - " 2"
+      - " 3"
+      - " 4"
+
+rule-providers:
+Global:
+type: http
+behavior: classical
+path: ./RuleSet/Global.yaml
+url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Global.yaml
+interval: 86400
+
+rules:
+  - "MATCH,DIRECT"
