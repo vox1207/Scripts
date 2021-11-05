@@ -21,8 +21,8 @@ payload:
   - DOMAIN-SUFFIX,apm3.music.163.com
   - DOMAIN-SUFFIX,interface.music.163.com
   - DOMAIN-SUFFIX,interface3.music.163.com
-  - DOMAIN-SUFFIX,clientlog.music.163.com.com
-  
+  - DOMAIN-SUFFIX,clientlog.music.163.com
+  - DOMAIN-SUFFIX,nstool.netease.com
   - DOMAIN-SUFFIX,mam.netease.com
   - DOMAIN-SUFFIX,hz.netease.com
   - DOMAIN-SUFFIX,p4.music.126.net
