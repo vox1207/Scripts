@@ -2,6 +2,16 @@
 # P: https://github.com/Vaokgxi/Vox/edit/main/QuantumultX/UnlockNetEaseCloudMusic.list
 # W: @Vox cr from @O7Y0
 payload:
+# REJECT
+  - DOMAIN,admusicpic.music.126.net
+  - DOMAIN,iadmat.nosdn.127.net
+  - DOMAIN,iadmusicmat.music.126.net
+  - DOMAIN,iadmusicmatvideo.music.126.net
+
+# Netease Music USER-AGENT
+  - DOMAIN-KEYWORD,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90
+  - DOMAIN-KEYWORD,NeteaseMusic*
+
 # Netease Music
   - DOMAIN-SUFFIX,163yun.com
   - DOMAIN-SUFFIX,music.126.net
