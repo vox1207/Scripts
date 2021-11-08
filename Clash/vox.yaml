@@ -1,0 +1,256 @@
+mixed-port: 7890
+allow-lan: false
+external-controller: 127.0.0.1:11355
+secret: ""
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  
+  
+proxies:
+  - name: 🇺🇲 美国 优化-1
+    server: shusa.proconcn.xyz
+    port: 560
+    type: ssr
+    cipher: chacha20-ietf
+    password: mblank1port
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 31264:k4w6-l5j4
+    obfs-param: ""
+  - name: 🇺🇲 美国 优化-2
+    server: shusa.proconcn.xyz
+    port: 561
+    type: ssr
+    cipher: chacha20-ietf
+    password: mblank1port
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 31264:k4w6-l5j4
+    obfs-param: ""
+  - name: 🇺🇲 美国 优化-3
+    server: shusa.proconcn.xyz
+    port: 562
+    type: ssr
+    cipher: chacha20-ietf
+    password: mblank1port
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 31264:k4w6-l5j4
+    obfs-param: ""
+  - name: 🇺🇲 美国 优化-4
+    server: shusa.proconcn.xyz
+    port: 563
+    type: ssr
+    cipher: chacha20-ietf
+    password: mblank1port
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 31264:k4w6-l5j4
+    obfs-param: ""
+  - name: 🇺🇲 美国 优化-5
+    server: shusa.proconcn.xyz
+    port: 564
+    type: ssr
+    cipher: chacha20-ietf
+    password: mblank1port
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 31264:k4w6-l5j4
+    obfs-param: ""
+  - name: 🇺🇲 美国 优化-6
+    server: shusa.proconcn.xyz
+    port: 565
+    type: ssr
+    cipher: chacha20-ietf
+    password: mblank1port
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 31264:k4w6-l5j4
+    obfs-param: ""
+  - name: 🇺🇲 美国 优化-7
+    server: shusa.proconcn.xyz
+    port: 566
+    type: ssr
+    cipher: chacha20-ietf
+    password: mblank1port
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 31264:k4w6-l5j4
+    obfs-param: ""
+  - name: 🇺🇲 美国 优化-8
+    server: shusa.proconcn.xyz
+    port: 567
+    type: ssr
+    cipher: chacha20-ietf
+    password: mblank1port
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 31264:k4w6-l5j4
+    obfs-param: ""
+  - name: 🇺🇲 美国 优化-9
+    server: shusa.proconcn.xyz
+    port: 568
+    type: ssr
+    cipher: chacha20-ietf
+    password: mblank1port
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 31264:k4w6-l5j4
+    obfs-param: ""
+  - name: 🇺🇲 美国 优化-10
+    server: shusa.proconcn.xyz
+    port: 569
+    type: ssr
+    cipher: chacha20-ietf
+    password: mblank1port
+    protocol: auth_aes128_md5
+    obfs: plain
+    protocol-param: 31264:k4w6-l5j4
+    obfs-param: ""
+  - name: 网易云解锁节点
+    type: http
+    server: 43.128.37.178
+    port: "2021"
+proxy-providers:
+  Q1travel:
+    type: http
+    url: https://subcon.dlj.tf/sub?target=clash&new_name=true&url=https%3A%2F%2Fs.sublink.me%2Fsubscribe%2F35383%2FoBFDOzE67jH%2Fssr%2F&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
+    interval: 3600
+    path: ./Proxy/Q1travel.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  Free:
+    type: http
+    url: https://subcon.dlj.tf/sub?target=clash&new_name=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Flearnhard-cn%2Ffree_proxy_ss%2Fmain%2Ffree&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
+    interval: 3600
+    path: ./Proxy/Free.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  NetEaseMusic:
+    type: http
+    url: https://raw.githubusercontent.com/O7Y0/Attached/main/UnblockNeteaseMusic/UnblockNeteaseMusic.txt
+    interval: 3600
+    path: ./Proxy/NetEaseMusic.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+proxy-groups:
+  - name: MATCH
+    type: select
+    proxies:
+      - DIRECT
+      - ♻️ AUTO SELECT
+      - 🔮 LOAD BALANCE
+      - 🇺🇲 US
+  - name: PROXY
+    type: select
+    proxies:
+      - DIRECT
+      - ♻️ AUTO SELECT
+      - 🔮 LOAD BALANCE
+      - 🇺🇲 US
+    use:
+      - Q1travel
+      - Free
+  - name: 🇺🇲 US
+    proxies:
+      - 🇺🇲 美国 优化-1
+      - 🇺🇲 美国 优化-2
+      - 🇺🇲 美国 优化-3
+      - 🇺🇲 美国 优化-4
+      - 🇺🇲 美国 优化-5
+      - 🇺🇲 美国 优化-6
+      - 🇺🇲 美国 优化-7
+      - 🇺🇲 美国 优化-8
+      - 🇺🇲 美国 优化-9
+      - 🇺🇲 美国 优化-10
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+  - name: ♻️ AUTO SELECT
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - Q1travel
+      - Free
+  - name: 🔮 LOAD BALANCE
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - Q1travel
+      - Free
+  - name: NetEase Music
+    proxies:
+      - DIRECT
+      - 网易云解锁节点
+    use:
+      - NetEaseMusic
+    type: select
+rule-providers:
+  NetEaseMusic:
+    type: http
+    behavior: classical
+    path: ./RuleSet/NetEaseMusic.yaml
+    url: https://raw.githubusercontent.com/Vaokgxi/Vox/main/Clash/NetEaseMusic.list
+    interval: 86400
+  Unbreak:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Unbreak.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
+    interval: 86400
+  GoogleVoice:
+    type: http
+    behavior: classical
+    path: ./RuleSet/GoogleVoice.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Google/GoogleVoice.yaml
+    interval: 86400
+  OneDrive:
+    type: http
+    behavior: classical
+    path: ./RuleSet/OneDrive.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Microsoft/OneDrive.yaml
+    interval: 86400
+  Global:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Global.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Global.yaml
+    interval: 86400
+  China:
+    type: http
+    behavior: classical
+    path: ./RuleSet/China.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
+    interval: 86400
+  ChinaIP:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/ChinaIP.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
+    interval: 86400
+rules:
+  - RULE-SET,NetEaseMusic,NetEase Music
+  - RULE-SET,Unbreak,DIRECT
+  - RULE-SET,GoogleVoice,🇺🇲 US
+  - RULE-SET,Global,PROXY
+  - RULE-SET,China,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR,fe80::/10,DIRECT
+  - IP-CIDR,119.28.28.28/32,DIRECT
+  - IP-CIDR,182.254.116.0/24,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,MATCH
