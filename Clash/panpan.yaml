@@ -3,7 +3,7 @@ allow-lan: false
 external-controller: 127.0.0.1:11355
 secret: ""
 proxies:
-  - name: 网易云解锁节点
+  - name: 🎧 网易音乐 0
     type: http
     server: 43.128.37.178
     port: "2021"
@@ -27,14 +27,12 @@ proxy-providers:
       interval: 600
       url: http://www.gstatic.com/generate_204
 proxy-groups:
-  - name: MATCH
+  - name: 🐟 漏网之鱼
     type: select
     proxies:
       - DIRECT
-      - ♻️ 自动选择
-      - 🔮 负载均衡
-      - 🔯 故障转移
-  - name: PROXY
+      - 🔰 节点选择
+  - name: 🔰 节点选择
     type: select
     proxies:
       - DIRECT
@@ -61,10 +59,10 @@ proxy-groups:
     interval: 180
     use:
       - Free
-  - name: NetEase Music
+  - name: 🎵 网易音乐
     proxies:
       - DIRECT
-      - 网易云解锁节点
+      - 🎧 网易音乐 0
     use:
       - NetEaseMusic
     type: select
@@ -112,10 +110,10 @@ rule-providers:
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
     interval: 86400
 rules:
-  - RULE-SET,NetEaseMusic,NetEase Music
+  - RULE-SET,NetEaseMusic,🎵 网易音乐
   - RULE-SET,Unbreak,DIRECT
   - RULE-SET,Hijacking,REJECT
-  - RULE-SET,Global,PROXY
+  - RULE-SET,Global,🔰 节点选择
   - RULE-SET,China,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
@@ -127,4 +125,4 @@ rules:
   - IP-CIDR,119.28.28.28/32,DIRECT
   - IP-CIDR,182.254.116.0/24,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,MATCH
+  - MATCH,🐟 漏网之鱼
