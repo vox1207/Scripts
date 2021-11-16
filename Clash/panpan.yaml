@@ -115,6 +115,7 @@ rules:
   - RULE-SET,Hijacking,REJECT
   - RULE-SET,Global,🔰 节点选择
   - RULE-SET,China,DIRECT
+  - RULE-SET,ChinaIP,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
