@@ -10,7 +10,7 @@ proxies:
 proxy-providers:
   Free:
     type: http
-    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Flearnhard-cn%2Ffree_proxy_ss%2Fmain%2Ffree&insert=false&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Flearnhard-cn%2Ffree_proxy_ss%2Fmain%2Ffree&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
     interval: 3600
     path: ./Proxy/Free.yaml
     health-check:
