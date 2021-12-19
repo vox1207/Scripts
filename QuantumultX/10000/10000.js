@@ -14,7 +14,7 @@ const lowestBalance = $.getdata($.LOWEST_BALANCE_KEY) || 5;
     $.desc = '请获取根据说明获取Cookie，点击前往';
     $.msg($.name, $.subt, $.desc, {
       'open-url':
-        'https://raw.githubusercontent.com/Vaokgxi/Vox/main/QuantumultX/10000/10000.cookie.js',
+        'https://raw.githubusercontent.com/vox1207/Scripts/main/QuantumultX/10000/10000.cookie.js',
     });
 
     $.done();
