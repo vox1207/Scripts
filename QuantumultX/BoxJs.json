@@ -72,7 +72,7 @@
       "settings": [
         {
           "id": "id77_10000_balanceReminder",
-          "name": "套餐费用",
+          "name": "检测",
           "val": false,
           "type": "boolean",
           "autoGrow": false,
