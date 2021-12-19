@@ -73,8 +73,8 @@
         {
           "id": "id77_10000_balanceReminder",
           "name": "套餐费用",
-          "val": "28",
-          "type": "text",
+          "val": false,
+          "type": "boolean",
           "autoGrow": false,
           "rows": 2,
           "desc": ""
