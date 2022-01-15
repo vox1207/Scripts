@@ -265,6 +265,7 @@ function realtimeWeather() {
       realtime.wind.speed,
       realtime.wind.direction
     )}
+    
 ${alertInfo}${hourlySkycon}
 `,
     {
