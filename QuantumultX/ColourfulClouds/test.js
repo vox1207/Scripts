@@ -275,6 +275,59 @@ ${alertInfo}${hourlySkycon}
 }
 
 function dailyForcast() { }
+  const data = $.weather.result;
+  const address = $.address;
+
+  const alert = data.alert;
+  const alertInfo =
+    alert.content.length == 0
+      ? ""
+      : alert.content.reduce((acc, curr) => {
+        if (curr.status === "预警中") {
+          return acc + "\n" + mapAlertCode(curr.code) + "预警";
+        } else {
+          return acc;
+        }
+      }, "[预警]") + "\n\n";
+
+  const realtime = data.realtime;
+  const keypoint = data.forecast_keypoint;
+
+  const hourly = data.hourly;
+
+ # let hourlySkycon = "[未来3小时]\n";
+  for (let i = 0; i < 3; i++) {
+    const skycon = hourly.skycon[i];
+    const dt = new Date(skycon.datetime);
+    const time = dt.getHours() + 1;
+    dt.setHours(dt.getHours() + 1);
+    hourlySkycon +=
+      `${now}-${dt.getHours() + 1}时 ${mapSkycon(skycon.value)[0]}` +
+      (i == 2 ? "" : "\n");
+  }
+#
+  const time = dt.getHours()
+  if time = 22 && 7 {
+
+  $.notify(
+    `[彩云天气] ${address.city} ${address.district} ${address.street}`,
+    `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${realtime.air_quality.description.chn
+    }`,
+    `🔱 ${keypoint}
+🌡 体感${realtime.life_index.comfort.desc} ${realtime.apparent_temperature
+    } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
+🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(
+      realtime.wind.speed,
+      realtime.wind.direction
+    )}
+    
+${alertInfo}${hourlySkycon}
+`,
+    {
+      "media-url": `${mapSkycon(realtime.skycon)[1]}`,
+    }
+  );
+}
 
 /************************** 天气对照表 *********************************/
 
