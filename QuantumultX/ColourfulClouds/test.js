@@ -306,8 +306,8 @@ function dailyForcast() { }
       (i == 2 ? "" : "\n");
   }
 #
-  const time = dt.getHours()
-  if time = 22 && 7 {
+  const time = dt.getMinutes()
+  if time = 26 {
 
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
