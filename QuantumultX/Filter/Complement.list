@@ -1,4 +1,6 @@
+# > Core77
+host-suffix, core77.com, Auto
 # > Pinterest
 host-suffix, pinimg.com, Static
 # > Yanko Design
-host, www.yankodesign.com, Auto
+host-suffix, yankodesign.com, Auto
