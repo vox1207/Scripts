@@ -7,11 +7,9 @@
 √ 自动定位
 √ 异常天气预警
 √ 实时天气预报
-
 TODO:
 - 降雨提醒
 - 每日睡前预报
-
 配置：
 1️⃣ 配置自动定位
 根据平台添加如下配置
@@ -20,13 +18,11 @@ TODO:
 hostname=weather-data.apple.com, api.weather.com
 [rewrite_local]
 https:\/\/((weather-data\.apple)|(api.weather))\.com url script-request-header https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js
-
 (2). Loon
 [MITM]
 hostname=weather-data.apple.com, api.weather.com
 [Script]
 http-request https:\/\/((weather-data\.apple)|(api.weather))\.com script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, require-body=false
-
 (3). Surge
 [MITM]
 hostname=weather-data.apple.com, api.weather.com
@@ -265,7 +261,6 @@ function realtimeWeather() {
       realtime.wind.speed,
       realtime.wind.direction
     )}
-    
 ${alertInfo}${hourlySkycon}
 `,
     {
@@ -275,59 +270,6 @@ ${alertInfo}${hourlySkycon}
 }
 
 function dailyForcast() { }
-  const data = $.weather.result;
-  const address = $.address;
-
-  const alert = data.alert;
-  const alertInfo =
-    alert.content.length == 0
-      ? ""
-      : alert.content.reduce((acc, curr) => {
-        if (curr.status === "预警中") {
-          return acc + "\n" + mapAlertCode(curr.code) + "预警";
-        } else {
-          return acc;
-        }
-      }, "[预警]") + "\n\n";
-
-  const realtime = data.realtime;
-  const keypoint = data.forecast_keypoint;
-
-  const hourly = data.hourly;
-
- # let hourlySkycon = "[未来3小时]\n";
-  for (let i = 0; i < 3; i++) {
-    const skycon = hourly.skycon[i];
-    const dt = new Date(skycon.datetime);
-    const time = dt.getHours() + 1;
-    dt.setHours(dt.getHours() + 1);
-    hourlySkycon +=
-      `${now}-${dt.getHours() + 1}时 ${mapSkycon(skycon.value)[0]}` +
-      (i == 2 ? "" : "\n");
-  }
-#
-  const time = dt.getMinutes()
-  if time = 26 {
-
-  $.notify(
-    `[彩云天气] ${address.city} ${address.district} ${address.street}`,
-    `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${realtime.air_quality.description.chn
-    }`,
-    `🔱 ${keypoint}
-🌡 体感${realtime.life_index.comfort.desc} ${realtime.apparent_temperature
-    } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
-🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(
-      realtime.wind.speed,
-      realtime.wind.direction
-    )}
-    
-${alertInfo}${hourlySkycon}
-`,
-    {
-      "media-url": `${mapSkycon(realtime.skycon)[1]}`,
-    }
-  );
-}
 
 /************************** 天气对照表 *********************************/
 
