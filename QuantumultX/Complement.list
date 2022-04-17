@@ -1,0 +1,14 @@
+# DIRECT
+host, contentsync.onenote.com, direct
+
+# PROXY
+host, www.marxists.org, Static
+host, api.prod.headspace.com, Static
+host, sketchitbr.gumroad.com, Static
+
+# REJECT
+# NetEaseCloudMusic
+HOST,admusicpic.music.126.net,REJECT
+HOST,iadmat.nosdn.127.net,REJECT
+HOST,iadmusicmat.music.126.net,REJECT
+HOST,iadmusicmatvideo.music.126.net,REJECT
