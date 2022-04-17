@@ -1,6 +1,24 @@
+# DIRECT
+# > Onenote
+host, contentsync.onenote.com, direct
+
+# PROXY
 # > Core77
 host-suffix, core77.com, Auto
 # > Pinterest
 host-suffix, pinimg.com, Static
 # > Yanko Design
 host-suffix, yankodesign.com, Auto
+# > Headspace
+host, api.prod.headspace.com, Static
+# > Sketch-it!
+host, sketchitbr.gumroad.com, Static
+# > 中文马克思主义文库
+host, www.marxists.org, Static
+
+# REJECT
+# > NetEaseCloudMusic
+HOST,admusicpic.music.126.net,REJECT
+HOST,iadmat.nosdn.127.net,REJECT
+HOST,iadmusicmat.music.126.net,REJECT
+HOST,iadmusicmatvideo.music.126.net,REJECT
