@@ -3,6 +3,8 @@
 host, contentsync.onenote.com, direct
 
 # PROXY
+# > Google Voice
+host-suffix, googleapis.com, CA
 # > Core77
 host-suffix, core77.com, Auto
 # > Pinterest
