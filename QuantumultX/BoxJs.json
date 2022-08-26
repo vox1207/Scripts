@@ -1,0 +1,97 @@
+{
+  "id": "vox.app.sub",
+  "name": "Vox Subscription",
+  "author": "@Vox",
+  "icon": "https://avatars.githubusercontent.com/u/83031055?s=400&u=25e44cb876c65662b4daa488c301d58cb37611da&v=4",
+  "repo": "https://github.com/vox1207/Scripts/tree/main/QuantumultX",
+  "apps": [ 
+    {
+      "id": "ColourfulClouds Weather",
+      "name": "彩云天气",
+      "keys": [
+        "@caiyun.token.caiyun",
+        "@caiyun.token.tencent",
+        "@caiyun.display_location",
+        "@caiyun.location.latitude",
+        "@caiyun.location.longitude",
+        "@caiyun.address"
+      ],
+      "settings": [
+        {
+          "id": "@caiyun.token.caiyun",
+          "name": "彩云天气API Token",
+          "val": null,
+          "type": "text",
+          "autoGrow": false,
+          "rows": 2,
+          "desc": "彩云天气的Token，可以自行申请"
+        },
+        {
+          "id": "@caiyun.token.tencent",
+          "name": "腾讯地图API Token",
+          "val": "AHEBZ-ASTWX-CIW4P-7TV7T-AWKLS-7CFWP",
+          "type": "text",
+          "rows": 1,
+          "desc": ""
+        },
+        {
+          "id": "@caiyun.display_location",
+          "name": "是否在日志中显示经纬度",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        },
+        {
+          "id": "@caiyun.location.latitude",
+          "name": "纬度",
+          "val": null,
+          "type": "text",
+          "desc": "纬度，可以关闭MITM获取位置，手动设置"
+        },
+        {
+          "id": "@caiyun.location.longitude",
+          "name": "经度",
+          "val": null,
+          "type": "text",
+          "desc": "经度，可以关闭MITM获取位置，手动设置"
+        }
+      ],
+      "author": "@Vox",
+      "repo": "https://github.com/vox1207/Scripts/tree/main/QuantumultX",
+      "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Color/caiyun.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/caiyun.png"],
+      "script": ["https://raw.githubusercontent.com/vox1207/Scripts/main/QuantumultX/ColourfulClouds/DailyForcast.js", "https://raw.githubusercontent.com/vox1207/Scripts/main/QuantumultX/ColourfulClouds/RainfallAlert.js"]
+    }, 
+
+    {
+      "id": "10000",
+      "name": "电信余额提醒",
+      "keys": [
+        "id77_10000_balanceReminder",
+        "id77_10000_lowestBalance"
+      ],
+      "settings": [
+        {
+          "id": "id77_10000_balanceReminder",
+          "name": "检测",
+          "val": false,
+          "type": "boolean",
+          "autoGrow": false,
+          "rows": 2,
+          "desc": ""
+        },
+        {
+          "id": "id77_10000_lowestBalance",
+          "name": "套餐费用",
+          "val": "28",
+          "type": "text",
+          "rows": 1,
+          "desc": ""
+        }
+      ],
+      "author": "@Vox",
+      "repo": "https://github.com/Vaokgxi/Vox/tree/main/QuantumultX",
+      "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Color/telecominfinty.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/telecominfinty.png"],
+      "script": ["https://raw.githubusercontent.com/vox1207/Scripts/main/QuantumultX/10000/10000.js", "https://raw.githubusercontent.com/vox1207/Scripts/main/QuantumultX/10000/10000.cookie.js"]
+    }
+  ]  
+}
