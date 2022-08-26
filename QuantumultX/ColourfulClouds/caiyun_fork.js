@@ -1,7 +1,7 @@
 /**
 彩云天气 v0.1 alpha
 @author: Peng-YM
-更新地址：https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js
+更新地址：https://github.com/Peng-YM/QuanX/blob/master/Tasks/caiyun.js
  *
 功能：
 √ 自动定位
