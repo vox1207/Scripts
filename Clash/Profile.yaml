@@ -169,9 +169,9 @@ rule-providers:
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
     interval: 86400
 rules:
-  - DOMAIN-SUFFIX,github.com,PROXY
-  - DOMAIN-SUFFIX,raw.githubusercontent.com,PROXY
-  - DOMAIN-KEYWORD,google.com,PROXY
+  #- DOMAIN-SUFFIX,github.com,PROXY
+  #- DOMAIN-SUFFIX,raw.githubusercontent.com,PROXY
+  #- DOMAIN-KEYWORD,google.com,PROXY
   - RULE-SET,Unbreak,DIRECT
   - RULE-SET,Hijacking,REJECT
   - RULE-SET,NetEaseMusic,NetEase Music
