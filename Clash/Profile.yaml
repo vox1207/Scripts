@@ -43,7 +43,69 @@ dns:
       
 proxies:
 proxy-providers:      
+
 proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - DIRECT
+      - Q1 Auto
+      - F1 Auto
+      - F2 Auto
+      - 🇺🇸 US
+      - MANUAL
+  - name: MATCH
+    type: select
+    proxies:
+      - DIRECT
+      - PROXY
+      - 🇺🇸 US
+  - name: MANUAL
+    type: select
+    use:
+      - Q1
+      - F1
+      - F2
+  - name: Q1 Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - Q1     
+  - name: F1 Auto
+    type: url-test
+    use:
+      - F1
+  - name: F2 Auto
+    type: url-test
+    use:
+      - F2  
+  - name: 🇺🇸 US
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🇨🇦 加拿大优化
+      - 🇰🇷 韩国高速接入A
+    use:
+      - US
+    filter: '加拿大|美国|韩国'
+  - name: NetEase Music
+    proxies:
+      - DIRECT
+      - 🚀 URL TEST
+      - 🎧 网易音乐 0
+    use:
+      - NetEaseMusic
+    type: select
+  - name: 🚀 URL TEST
+    type: url-test
+    url: http://clientlog.music.163.com/
+    interval: 240
+    proxies:
+      - 🎧 网易音乐 0
+    use:
+      - NetEaseMusic
       
 rule-providers:
   Unbreak:
