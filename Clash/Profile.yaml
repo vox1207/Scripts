@@ -40,9 +40,8 @@ dns:
     geoip-code: CN
     ipcidr:
       - 240.0.0.0/4
-      
-
-
+proxies:
+proxy-providers:      
 proxy-groups:
   - name: PROXY
     type: select
