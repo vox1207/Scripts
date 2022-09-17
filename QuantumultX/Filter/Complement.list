@@ -3,14 +3,16 @@
 host, contentsync.onenote.com, direct
 
 # PROXY
+# > APK Pure
+host-suffix, apkpure.com, Static
 # > Google Voice
 #host-suffix, googleapis.com, US
 # > Core77
-host-suffix, core77.com, Auto
+host-suffix, core77.com, Static
 # > Pinterest
 host-suffix, pinimg.com, Static
 # > Yanko Design
-host-suffix, yankodesign.com, Auto
+host-suffix, yankodesign.com, Static
 # > Headspace
 host, api.prod.headspace.com, Static
 # > Sketch-it!
