@@ -3,6 +3,8 @@
 #host, contentsync.onenote.com, direct
 
 # PROXY
+# > akwebguide
+host-suffix, akwebguide.com, Static
 # > APK Pure
 host-suffix, apkpure.com, Static
 # > Google Voice
