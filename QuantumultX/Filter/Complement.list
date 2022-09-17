@@ -17,8 +17,6 @@ host-suffix, yankodesign.com, Static
 host, api.prod.headspace.com, Static
 # > Sketch-it!
 host, sketchitbr.gumroad.com, Static
-# > 中文马克思主义文库
-host, www.marxists.org, Static
 
 # REJECT
 # > NetEaseCloudMusic
