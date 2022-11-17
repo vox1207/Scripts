@@ -247,7 +247,7 @@ function realtimeWeather() {
   let hourlySkycon = "[未来3小时]\n";
   for (let i = 0; i < 3; i++) {
     const skycon = hourly.skycon[i];
-    const tem = hourly.temperature[i]
+    const tem = hourly.temperature[i+1]
     const dt = new Date(skycon.datetime);
     const now = dt.getHours() + 1;
     dt.setHours(dt.getHours() + 1);
