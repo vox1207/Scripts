@@ -241,13 +241,6 @@ function realtimeWeather() {
   const realtime = data.realtime;
   const keypoint = data.forecast_keypoint;
   
-    if (keypoint.includes(不会)) {
-          return keypoint;
-        } else {
-          return;
-        },
-       "[降雨提醒]" + "\n\n";
-
   const hourly = data.hourly;
   const daily = data.daily;
 
