@@ -242,7 +242,7 @@ function realtimeWeather() {
   const keypoint = data.forecast_keypoint;
 
   const hourly = data.hourly;
-  
+  const daily = data.daily;
 /*
   let hourlySkycon = "[未来3小时]\n";
   for (let i = 0; i < 3; i++) {
@@ -255,7 +255,7 @@ function realtimeWeather() {
       (i == 2 ? "" : "\n");
   }*/      
   
-  const daily = data.daily;
+
   
   
   let dailySkycon = "[一周预报]\n";
