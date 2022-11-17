@@ -231,7 +231,7 @@ function realtimeWeather() {
     alert.content.length == 0
       ? ""
       : alert.content.reduce((acc, curr) => {
-        if (curr.status === "预警中") {
+        if (curr.status != "预警中") {
           return acc + "\n" + mapAlertCode(curr.code) + "预警";
         } else {
           return acc;
@@ -240,6 +240,13 @@ function realtimeWeather() {
 
   const realtime = data.realtime;
   const keypoint = data.forecast_keypoint;
+  
+    if (keypoint.includes(不会)) {
+          return keypoint;
+        } else {
+          return;
+        },
+       "[降雨提醒]" + "\n\n";
 
   const hourly = data.hourly;
   const daily = data.daily;
