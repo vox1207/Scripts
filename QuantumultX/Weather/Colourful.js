@@ -264,7 +264,7 @@ function realtimeWeather() {
     dailySkycon +=
       `${dt.getDate()}日 ${mapSkycon(skycon.value)[0]}` +
       (i == 6 ? "" : "\n");
-    dt.setDate(dt.getDate() + 1);*/
+    dt.setDate(dt.getDate() + 1);
   }*/
 
   $.notify(
