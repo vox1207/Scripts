@@ -247,21 +247,23 @@ function realtimeWeather() {
   let hourlySkycon = "[未来3小时]\n";
   for (let i = 0; i < 3; i++) {
     const skycon = hourly.skycon[i];
+    const tem = hourly.temperature[i]
     const dt = new Date(skycon.datetime);
     const now = dt.getHours() + 1;
     dt.setHours(dt.getHours() + 1);
     hourlySkycon +=
-      `${now}-${dt.getHours() + 1}时 ${mapSkycon(skycon.value)[0]}` +
+      `${now}-${dt.getHours() + 1}时 ${mapSkycon(skycon.value)[0]} ${tem.value}` +
       (i == 2 ? "" : "\n");     
  }
  
   let dailySkycon = "[一周预报]\n";
   for (let i = 0; i < 7; i++) {
     const skycon = daily.skycon[i];
+    const tem = daily.temperature[i]
     const dt = new Date(skycon.date);
     
     dailySkycon +=
-      `${dt.getDate()}日 ${mapSkycon(skycon.value)[0]}` +
+      `${dt.getDate()}日 ${mapSkycon(skycon.value)[0]} ${tem.min}°-${tem.max}°` +
       (i == 6 ? "" : "\n");
     dt.setDate(dt.getDate() + 1);
   }
