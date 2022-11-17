@@ -242,6 +242,7 @@ function realtimeWeather() {
   const keypoint = data.forecast_keypoint;
 
   const hourly = data.hourly;
+  
 
   let hourlySkycon = "[未来3小时]\n";
   for (let i = 0; i < 3; i++) {
@@ -252,12 +253,25 @@ function realtimeWeather() {
     hourlySkycon +=
       `${now}-${dt.getHours() + 1}时 ${mapSkycon(skycon.value)[0]}` +
       (i == 2 ? "" : "\n");
+      
+  const dayly = data.dayly;
+  
+  
+  let dailySkycon = "[一周预报]\n";
+  for (let i = 0; i < 7; i++) {
+    const skycon = daily.skycon[i];
+    const dt = new Date(skycon.date);
+    
+    dailySkycon +=
+      `${dt.getDate()}日 ${mapSkycon(skycon.value)[0]}` +
+      (i == 6 ? "" : "\n");
+    dt.setDate(dt.getDate() + 1);
   }
 
   $.notify(
-    `[彩云天气] ${address.city} ${address.district} ${address.street
+    `[彩云天气] ${address.city} ${address.district} ${address.street}`,
+    `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${realtime.air_quality.description.chn
     }`,
-    `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${realtime.air_quality.description.chn}`,
     `🔱 ${keypoint}
 🌡 体感${realtime.life_index.comfort.desc} ${realtime.apparent_temperature
     } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
