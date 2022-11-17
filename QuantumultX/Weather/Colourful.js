@@ -255,7 +255,7 @@ function realtimeWeather() {
       (i == 2 ? "" : "\n");
   }*/      
   
-  const dayly = data.dayly;
+  const daily = data.daily;
   
   
   let dailySkycon = "[一周预报]\n";
