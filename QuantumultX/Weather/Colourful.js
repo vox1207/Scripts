@@ -278,6 +278,8 @@ function realtimeWeather() {
     )}
 
 
+${alertInfo}${hourlySkycon}
+`,
 ${alertInfo}${dailySkycon}
 `,
     {
