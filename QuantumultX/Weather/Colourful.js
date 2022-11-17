@@ -277,7 +277,7 @@ function realtimeWeather() {
       realtime.wind.direction
     )}
 
-${alertInfo}${hourlySkycon}${dailySkycon}
+${alertInfo}${hourlySkycon}
 `,
     {
       "media-url": `${mapSkycon(realtime.skycon)[1]}`,
