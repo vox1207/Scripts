@@ -222,6 +222,29 @@ function weatherAlert() {
   }
 }
 
+function rainAlert() {
+  const data = $.weather.result;
+  const keypoint = data.forecast_keypoint;
+  const address = $.address;
+  const alerted = $.read("alerted") || [];
+
+  if (data.status === "ok") {
+    data.content.forEach((forecast_keypoint) => {
+      if (keypoint.indexOf("不会") === -1) {
+        $.notify(
+          `[降雨提醒] ${address.city} ${address.district} ${address.street}`,
+          `{keypoint}`
+        );
+     /*   alerted.push(alert.alertId);*/
+        if (alerted.length > 10) {
+          alerted.shift();
+        }
+        $.write(alerted, "alerted");
+      }
+    });
+  }
+}
+
 function realtimeWeather() {
   const data = $.weather.result;
   const address = $.address;
