@@ -89,7 +89,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 韩国高速接入A
+      - 🇰🇷 韩国高速接入A
       - 🇨🇦 加拿大优化
   - name: NetEase Music
     proxies:
