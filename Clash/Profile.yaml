@@ -84,10 +84,8 @@ proxy-groups:
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
-    proxies:
-      - 🇨🇦 加拿大优化
-      - 🇰🇷 韩国高速接入A
     use:
+      - Q1
       - US
     filter: '加拿大|美国|韩国'
   - name: NetEase Music
