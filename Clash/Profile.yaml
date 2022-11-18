@@ -86,8 +86,8 @@ proxy-groups:
     interval: 300
     use:
       - Q1
-      - US
-    filter: '加拿大|美国|韩国'
+      - F2
+    filter: '加拿大|美国|韩国高速'
   - name: NetEase Music
     proxies:
       - DIRECT
