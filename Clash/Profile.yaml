@@ -74,10 +74,14 @@ proxy-groups:
       - Q1     
   - name: F1 Auto
     type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
     use:
       - F1
   - name: F2 Auto
     type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
     use:
       - F2  
   - name: 🇺🇸 US
