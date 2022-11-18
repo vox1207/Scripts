@@ -80,13 +80,6 @@ proxy-groups:
     type: url-test
     use:
       - F2  
-  - name: 🇺🇸 US
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - 韩国高速接入A
-      - 🇨🇦 加拿大优化
   - name: NetEase Music
     proxies:
       - DIRECT
