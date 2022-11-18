@@ -85,9 +85,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - Q1
       - F2
-    filter: '加拿大|美国|韩国高速'
   - name: NetEase Music
     proxies:
       - DIRECT
