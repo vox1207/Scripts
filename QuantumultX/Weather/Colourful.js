@@ -221,7 +221,7 @@ function weatherAlert() {
     });
   }
 }
-
+/*
 function rainAlert() {
   const data = $.weather.result;
   const address = $.address;
@@ -264,7 +264,7 @@ ${alertInfo}
   );
 }
 }
-
+*/
 function realtimeWeather() {
   const data = $.weather.result;
   const address = $.address;
