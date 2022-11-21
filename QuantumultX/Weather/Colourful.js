@@ -240,11 +240,12 @@ function rainAlert() {
   
   const realtime = data.realtime;
   const keypoint = data.forecast_keypoint;
-  const minutely = data.minutely;
+  const minutely = data.minutely.probability;
  
-  if (minutely.probability[0] != 0 || minutely.probability[3] != 0) {  
+  if ((minutely[0]!=0 && {minutely[3]!=0 || minutely[2]!=0 || minutely[1]!=0}) ||
+      (minutely[0]==0 && {minutely[3]==0 || minutely[2]==0 || minutely[1]==0})){  
   $.notify(
-    `[彩云天气] ${address.city} ${address.district} ${address.street}`,
+    `[降雨提醒] ${address.city} ${address.district} ${address.street}`,
     `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${realtime.air_quality.description.chn
     }`,
     `🔱 ${keypoint}
