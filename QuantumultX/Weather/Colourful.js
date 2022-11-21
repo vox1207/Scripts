@@ -224,26 +224,49 @@ function weatherAlert() {
 
 function rainAlert() {
   const data = $.weather.result;
-  const keypoint = data.forecast_keypoint;
   const address = $.address;
-  const alerted = $.read("alerted") || [];
+  
+  const alert = data.alert;
+  const alertInfo =
+    alert.content.length == 0
+      ? ""
+      : alert.content.reduce((acc, curr) => {
+        if (curr.status === "预警中") {
+          return acc + "\n" + mapAlertCode(curr.code) + "预警";
+        } else {
+          return acc;
+        }
+      }, "[预警]") + "\n\n";
+  
+  const realtime = data.realtime;
+  const keypoint = data.forecast_keypoint;
+  const minutely = data.minutely;
+ 
+  if (minutely.probability[0] != 0 || minutely.probability[3] != 0) {  
+  $.notify(
+    `[彩云天气] ${address.city} ${address.district} ${address.street}`,
+    `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${realtime.air_quality.description.chn
+    }`,
+    `🔱 ${keypoint}
+🌡 体感${realtime.life_index.comfort.desc} ${realtime.apparent_temperature
+    } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
+🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(
+      realtime.wind.speed,
+      realtime.wind.direction
+    )}
+${alertInfo}${hourlySkycon}
+`,
+    {
+      "media-url": `${mapSkycon(realtime.skycon)[1]}`,
+    }
+  );
+}
+}
 
-  if (data.status === "ok") {
-    data.content.forEach((forecast_keypoint) => {
-      if (keypoint.indexOf("不会") === -1) {
         $.notify(
           `[降雨提醒] ${address.city} ${address.district} ${address.street}`,
           `{keypoint}`
         );
-     /*   alerted.push(alert.alertId);*/
-        if (alerted.length > 10) {
-          alerted.shift();
-        }
-        $.write(alerted, "alerted");
-      }
-    });
-  }
-}
 
 function realtimeWeather() {
   const data = $.weather.result;
