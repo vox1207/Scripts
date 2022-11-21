@@ -221,7 +221,7 @@ function weatherAlert() {
     });
   }
 }
-/*
+
 function rainAlert() {
   const data = $.weather.result;
   const address = $.address;
@@ -246,9 +246,9 @@ function rainAlert() {
       (minutely[0]==0 && {minutely[3]==0 || minutely[2]==0 || minutely[1]==0})){  
   $.notify(
     `[降雨提醒] ${address.city} ${address.district} ${address.street}`,
-    `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${realtime.air_quality.description.chn
-    }`,
-    `🔱 ${keypoint}
+    `🔱 ${keypoint}`,
+    `🔱 ${keypoint} ${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${realtime.air_quality.description.chn
+    }
 🌡 体感${realtime.life_index.comfort.desc} ${realtime.apparent_temperature
     } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
 🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(
@@ -264,11 +264,6 @@ ${alertInfo}
 }
 }
 
-        $.notify(
-          `[降雨提醒] ${address.city} ${address.district} ${address.street}`,
-          `{keypoint}`
-        );
-*/
 function realtimeWeather() {
   const data = $.weather.result;
   const address = $.address;
