@@ -315,9 +315,7 @@ function realtimeWeather() {
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
     `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${realtime.air_quality.description.chn
     }`,
-    `${mapSkycon(realtime.skycon)[0]} ${realtime.temperature} ℃  🌤 空气质量 ${realtime.air_quality.description.chn
-    }
-    🔱 ${keypoint}
+    `🔱 ${keypoint}
 🌡 体感${realtime.life_index.comfort.desc} ${realtime.apparent_temperature
     } ℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
 🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(
