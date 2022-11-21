@@ -221,7 +221,7 @@ function weatherAlert() {
     });
   }
 }
-
+/*
 function rainAlert() {
   const data = $.weather.result;
   const address = $.address;
@@ -254,7 +254,7 @@ function rainAlert() {
       realtime.wind.speed,
       realtime.wind.direction
     )}
-${alertInfo}${hourlySkycon}
+${alertInfo}
 `,
     {
       "media-url": `${mapSkycon(realtime.skycon)[1]}`,
@@ -267,7 +267,7 @@ ${alertInfo}${hourlySkycon}
           `[降雨提醒] ${address.city} ${address.district} ${address.street}`,
           `{keypoint}`
         );
-
+*/
 function realtimeWeather() {
   const data = $.weather.result;
   const address = $.address;
