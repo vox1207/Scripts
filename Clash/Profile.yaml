@@ -66,8 +66,7 @@ proxy-groups:
     interval: 300
     proxies:
       - DIRECT
-    use:
-      - Q1
+      - PROXY
   - name: MANUAL
     type: select
     use:
