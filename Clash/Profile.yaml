@@ -60,13 +60,6 @@ proxy-groups:
       - DIRECT
       - PROXY
       - 🇺🇸 US
-  - name: Spotify
-    type: select
-    url: https://open.spotify.com/
-    interval: 300
-    proxies:
-      - DIRECT
-      - PROXY
   - name: MANUAL
     type: select
     use:
@@ -146,12 +139,6 @@ rule-providers:
     path: ./RuleSet/NetEaseMusic.yaml
     url: https://raw.githubusercontent.com/Vaokgxi/Vox/main/Clash/NetEaseMusic.list
     interval: 86400
-  Spotify:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Streaming.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Music/Spotify.yaml
-    interval: 86400
   Streaming:
     type: http
     behavior: classical
@@ -183,7 +170,6 @@ rules:
   - RULE-SET,NetEaseMusic,NetEase Music
   - RULE-SET,OneDrive,DIRECT
   - RULE-SET,GoogleVoice,🇺🇸 US
-  - RULE-SET,Spotify,Spotify
   - RULE-SET,Streaming,PROXY
   - RULE-SET,StreamingSE,PROXY
   - RULE-SET,Global,PROXY
