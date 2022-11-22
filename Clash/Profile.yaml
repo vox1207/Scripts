@@ -64,8 +64,9 @@ proxy-groups:
     type: select
     url: https://open.spotify.com/
     interval: 300
-    use:
+    proxies:
       - DIRECT
+    use:
       - Q1
   - name: MANUAL
     type: select
