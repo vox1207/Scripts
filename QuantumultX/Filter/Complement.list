@@ -19,6 +19,8 @@ host-suffix, yankodesign.com, Static
 host, api.prod.headspace.com, Static
 # > Sketch-it!
 host, sketchitbr.gumroad.com, Static
+# > Libgen
+host, Libgen.*, Static
 
 # REJECT
 # > NetEaseCloudMusic
