@@ -20,7 +20,7 @@ host, api.prod.headspace.com, Static
 # > Sketch-it!
 host, sketchitbr.gumroad.com, Static
 # > Libgen
-host, Libgen.*, Static
+host, libgen.*, Static
 
 # REJECT
 # > NetEaseCloudMusic
