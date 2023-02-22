@@ -62,6 +62,8 @@ proxy-groups:
       - 🇺🇸 US
   - name: MANUAL
     type: select
+    proxies:
+      - 🇬🇧 英国一线
     use:
       - Q1
       - F1
