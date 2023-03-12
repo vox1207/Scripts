@@ -16,15 +16,14 @@ host-suffix, pinimg.com, Static
 # > Yanko Design
 host-suffix, yankodesign.com, Static
 # > Headspace
-host, api.prod.headspace.com, Static
+host-suffix, headspace.com, Static
 # > Sketch-it!
-host, sketchitbr.gumroad.com, Static
+host-suffix, sketchitbr.gumroad.com, Static
 # > Libgen
-host, libgen.rs, Static
-host, libgen.is, Static
-host, libgen.st, Static
-# > Headspace
-host, headspace.com, Static
+host-suffix, libgen.rs, Static
+host-suffix, libgen.is, Static
+host-suffix, libgen.st, Static
+
 
 # REJECT
 # > NetEaseCloudMusic
