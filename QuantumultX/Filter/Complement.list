@@ -23,6 +23,10 @@ host, sketchitbr.gumroad.com, Static
 host, libgen.rs, Static
 host, libgen.is, Static
 host, libgen.st, Static
+# > Headspace
+host, headspace.com, Static
+# > Notion
+host, www.notion.so, Notion
 
 # REJECT
 # > NetEaseCloudMusic
