@@ -70,7 +70,6 @@ proxy-groups:
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 120
-    filter: 'CT'
     use:
       - Q1
   - name: F1 Auto
