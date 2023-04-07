@@ -91,6 +91,14 @@ proxy-groups:
     proxies:
       - 🇰🇷 韩国高速接入A
       - 🇨🇦 加拿大优化
+  - name: OpenAI
+    type: select
+    url: https://chat.openai.com
+    interval: 300
+    use:
+      - Q1
+      - F1
+      - F2
   - name: NetEase Music
     proxies:
       - DIRECT
