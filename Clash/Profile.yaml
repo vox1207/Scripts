@@ -58,7 +58,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - PROXY
       - HK Auto
       - EX Auto
       - F1 Auto
@@ -95,7 +94,7 @@ proxy-groups:
     use:
       - US 
   - name: Open AI
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
