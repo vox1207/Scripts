@@ -98,10 +98,11 @@ proxy-groups:
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
-    use:
+    proxies:
       - EX Auto
       - F1 Auto
       - F2 Auto
+    use:
       - EX
       - F1
       - F2
