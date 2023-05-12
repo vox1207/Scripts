@@ -54,6 +54,8 @@ proxy-groups:
       - 1️⃣ F1 Auto
       - 2️⃣ F2 Auto
       - 🇺🇸 US Auto
+    use:
+      - US 
   - name: MATCH
     type: select
     proxies:
