@@ -105,7 +105,7 @@ proxy-groups:
       - EX
       - F1
       - F2
-  - name: 🎵NetEase Music
+  - name: 🎵 NetEase Music
     proxies:
       - DIRECT
       - 🎶 URL TEST
@@ -181,9 +181,9 @@ rule-providers:
 rules:
   - RULE-SET,Unbreak,DIRECT
   - RULE-SET,Hijacking,REJECT
-  - RULE-SET,NetEaseMusic,NetEase Music
+  - RULE-SET,NetEaseMusic,🎵 NetEase Music
   - RULE-SET,OneDrive,DIRECT
-  - RULE-SET,GoogleVoice,🇺🇸 US
+  - RULE-SET,GoogleVoice,🇺🇸 US Auto
   - RULE-SET,Streaming,PROXY
   - RULE-SET,StreamingSE,PROXY
   - RULE-SET,Global,PROXY
