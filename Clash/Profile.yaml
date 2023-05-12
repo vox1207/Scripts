@@ -70,8 +70,6 @@ proxy-groups:
     interval: 300
     use:
       - EX
-      - F1
-      - F2
   - name: HK Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
