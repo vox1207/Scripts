@@ -55,7 +55,7 @@ proxy-groups:
       - 2️⃣ F2 Auto
       - 🇺🇸 US Auto
     use:
-      - US 
+      - HK 
   - name: MATCH
     type: select
     proxies:
