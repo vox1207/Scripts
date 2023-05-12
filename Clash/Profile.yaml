@@ -93,7 +93,7 @@ proxy-groups:
     interval: 300
     use:
       - US 
-  - name: 🤖 Open AI
+  - name: 🤖 OpenAI
     type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
