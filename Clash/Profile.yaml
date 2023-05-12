@@ -49,71 +49,71 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - HK Auto
-      - EX Auto
-      - F1 Auto
-      - F2 Auto
-      - 🇺🇸 US
+      - 🇭🇰 HK Auto
+      - 🌍 EX Auto
+      - 1️⃣ F1 Auto
+      - 2️⃣ F2 Auto
+      - 🇺🇸 US Auto
   - name: MATCH
     type: select
     proxies:
       - DIRECT
-      - HK Auto
-      - EX Auto
-      - F1 Auto
-      - F2 Auto
-      - 🇺🇸 US
-  - name: EX Auto
+      - 🇭🇰 HK Auto
+      - 🌍 EX Auto
+      - 1️⃣ F1 Auto
+      - 2️⃣ F2 Auto
+      - 🇺🇸 US Auto
+  - name: 🌍 EX Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
       - EX
-  - name: HK Auto
+  - name: 🇭🇰 HK Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
       - HK
-  - name: F1 Auto
+  - name: 1️⃣ F1 Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
       - F1
-  - name: F2 Auto
+  - name: 2️⃣ F2 Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
       - F2  
-  - name: 🇺🇸 US
+  - name: 🇺🇸 US Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
       - US 
-  - name: Open AI
+  - name: 🤖Open AI
     type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - EX Auto
-      - F1 Auto
-      - F2 Auto
+      - 🌍 EX Auto
+      - 1️⃣ F1 Auto
+      - 2️⃣ F2 Auto
     use:
       - EX
       - F1
       - F2
-  - name: NetEase Music
+  - name: 🎵NetEase Music
     proxies:
       - DIRECT
-      - 🚀 URL TEST
+      - 🎶 URL TEST
       - 🎧 网易音乐 0
     use:
       - NetEaseMusic
     type: select
-  - name: 🚀 URL TEST
+  - name: 🎶 URL TEST
     type: url-test
     url: http://clientlog.music.163.com/
     interval: 240
