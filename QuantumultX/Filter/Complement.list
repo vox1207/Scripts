@@ -1,14 +1,12 @@
 # DIRECT
 # > Onenote
-#host, contentsync.onenote.com, direct
+#host-suffix, contentsync.onenote.com, direct
 
 # PROXY
 # > akwebguide
 host-suffix, akwebguide.com, Static
 # > APK Pure
 host-suffix, apkpure.com, Static
-# > Google Voice
-#host-suffix, googleapis.com, US
 # > Core77
 host-suffix, core77.com, Static
 # > Pinterest
@@ -23,7 +21,17 @@ host-suffix, sketchitbr.gumroad.com, Static
 host-suffix, libgen.rs, Static
 host-suffix, libgen.is, Static
 host-suffix, libgen.st, Static
+# > RSSHub
+host-suffix, rsshub.app, Static
 
+# > Google Voice
+#host-suffix, googleapis.com, US
+
+# > Notion
+host-suffix, notion.so, Notion
+
+# > OpenAI
+host-suffix, openai.com, OpenAI
 
 # REJECT
 # > NetEaseCloudMusic
