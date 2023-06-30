@@ -31,7 +31,7 @@ host-suffix, rsshub.app, Static
 host-suffix, notion.so, Notion
 
 # > OpenAI
-host-suffix, openai.com, OpenAI
+host-suffix, openai.com, ChatGPT
 
 # REJECT
 # > NetEaseCloudMusic
