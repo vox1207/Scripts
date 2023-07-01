@@ -32,6 +32,8 @@ host-suffix, notion.so, Notion
 
 # > OpenAI
 host-suffix, openai.com, 🏁 OTS
+# > 毒奶
+host-suffix, limbopro.com, Static
 
 # REJECT
 # > NetEaseCloudMusic
