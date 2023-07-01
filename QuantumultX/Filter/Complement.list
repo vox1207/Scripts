@@ -25,13 +25,13 @@ host-suffix, libgen.st, Static
 host-suffix, rsshub.app, Static
 
 # > Google Voice
-#host-suffix, googleapis.com, US
+#host-suffix, googleapis.com, 🇺🇸 US
 
 # > Notion
 host-suffix, notion.so, Notion
 
 # > OpenAI
-host-suffix, openai.com, ChatGPT
+host-suffix, openai.com, 🏁 OTS
 
 # REJECT
 # > NetEaseCloudMusic
