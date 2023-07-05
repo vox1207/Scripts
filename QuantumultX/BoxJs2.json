@@ -79,6 +79,13 @@
           "name": "查询月份", 
           "type": "month", 
           "desc": "填入账单月份，可查最近六个月，本月账单下月可查"
+        },
+        {
+          "id": "china_telecom_cookie",
+          "name": "手动输入cookie",
+          "val": null,
+          "type": "text",
+          "desc": "打开e.189.cn，抓包cookie"
         }
       ], 
       "name": "天翼电信套餐查询", 
