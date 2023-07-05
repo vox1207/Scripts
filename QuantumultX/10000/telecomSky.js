@@ -1,6 +1,8 @@
-/*
-copy from @Sunert
-https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/telecomSky.js
+
+/**
+ *cr from @Sunert
+ * https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/telecomSky.js
+ *
 签到兑好礼活动Token
 https:\/\/mkt\.21cn\.com\/mkt\/api\/user\/queryActivityInfo\.do\?activityId=\d+ url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/telecomSky.js
 */
