@@ -1,11 +1,32 @@
-
 /**
- *cr from @Sunert
- * https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/telecomSky.js
+电信天翼套餐
+@author: Sunert
+更新地址：https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/telecomSky.js
  *
-签到兑好礼活动Token
-https:\/\/mkt\.21cn\.com\/mkt\/api\/user\/queryActivityInfo\.do\?activityId=\d+ url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/telecomSky.js
+功能：
+√ 各月套餐查询
+√ 异常天气预警
+√ 实时天气预报
+
+TODO:
+- 话费查询
+- 流量查询
+- 通话剩余查询
+
+配置：
+1️⃣ 配置自动定位
+根据平台添加如下配置
+(1). Quantumult X
+[MITM]
+hostname = e.189.cn, mkt.21cn.com
+[rewrite_local]
+[rewrite_local]
+^https?:\/\/e\.189\.cn\/store\/user\/package_detail\.do url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/telecomSky.js
+https:\/\/mkt\.21cn\.com\/mkt\/api\/user\/queryActivityInfo\.do\?activityId=\d+ url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/telecomSky.js
+
 */
+
+/********************** SCRIPT START *********************************/
 const $ = new Env("中国电信 世界触手可及🤝");
 const Y = $.getdata('Mon').slice(0,4)||$.time('yyyy');
 const M = $.getdata('Mon').slice(-2)||$.time('MM') ; //查询前几个月，可以')'号后减几
