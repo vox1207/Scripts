@@ -20,10 +20,10 @@ TODO:
 [MITM]
 hostname = e.189.cn, mkt.21cn.com
 [rewrite_local]
-[rewrite_local]
-^https?:\/\/e\.189\.cn\/store\/user\/package_detail\.do url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/telecomSky.js
-https:\/\/mkt\.21cn\.com\/mkt\/api\/user\/queryActivityInfo\.do\?activityId=\d+ url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/telecomSky.js
-
+^https?:\/\/e\.189\.cn\/store\/user\/package_detail\.do url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/telecomSky.js
+https:\/\/mkt\.21cn\.com\/mkt\/api\/user\/queryActivityInfo\.do\?activityId=\d+ url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/telecomSky.js
+[task_local]
+1 10 3 * * https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/telecomSky.js, tag=天翼套餐查询
 */
 
 /********************** SCRIPT START *********************************/
