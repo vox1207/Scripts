@@ -23,6 +23,8 @@ host-suffix, libgen.is, Static
 host-suffix, libgen.st, Static
 # > RSSHub
 host-suffix, rsshub.app, Static
+# > Google
+host-suffix, gstatic.com, Static
 
 # > Google Voice
 #host-suffix, googleapis.com, 🇺🇸 US
