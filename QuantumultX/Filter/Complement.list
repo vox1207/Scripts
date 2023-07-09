@@ -39,7 +39,3 @@ host-suffix, limbopro.com, Static
 
 # REJECT
 # > NetEaseCloudMusic
-HOST,admusicpic.music.126.net,REJECT
-HOST,iadmat.nosdn.127.net,REJECT
-HOST,iadmusicmat.music.126.net,REJECT
-HOST,iadmusicmatvideo.music.126.net,REJECT
