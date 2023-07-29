@@ -4,7 +4,7 @@
  *
  */
 const $ = new Env('电信余额提醒');
-$.SESSION_KEY = 'id77_10000_balanceReminder';
+$.SESSION_KEY = 'china_telecom_cookie';
 $.LOWEST_BALANCE_KEY = 'id77_10000_lowestBalance';
 const lowestBalance = $.getdata($.LOWEST_BALANCE_KEY) || 5;
 
