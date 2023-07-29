@@ -1,10 +1,10 @@
 /**
- *cr from @nzw9314 from @1d77
+ * cr from @songyangzz from @id77
  * @fileoverview Template to compose HTTP reqeuest.
  *
  */
 const $ = new Env('电信余额提醒');
-$.SESSION_KEY = 'QRCODE=48352787ab3f47fd; pageOp=9e232e8acaacfcdd9ec00694c149b253; LT=14c223cc76e920ba; STK=4666F48F0DBD83AC5187D535C96599F8C2537D9C445677AE1EAB1DBC30CC3AD43DFA6E407024328CB4BB7E91703A2F5235E4270A7F6CFAFD17614DABDA0E94D9C461B439B6A242202C44A8C6FA802FEB95477ECA; DEVICEID=78485F1FA42C25D16CC5E1E3F39BD581=7B085FD472555A5C6B6ADD89C05080E1; GRAYNUMBER=DD30A02D7A5754F5597C7D31916CC354; JSESSIONID=aaaZP5ebQ1qVkdS2dYtLy; GUID=bbd57e1b931c44218741c81b2af6d07a; apm_ct=20230730001444000; apm_ip=120.235.8.244; apm_sid=3ACADE5731E533F78DA98555916137DD; apm_ua=4A0D4B20148F59B9B158F8ACA6867CD0; apm_uid=D3AEBC7051A49B4ADC206F55DA1717A1';
+$.SESSION_KEY = 'id77_10000_balanceReminder';
 $.LOWEST_BALANCE_KEY = 'id77_10000_lowestBalance';
 const lowestBalance = $.getdata($.LOWEST_BALANCE_KEY) || 5;
 
@@ -14,7 +14,7 @@ const lowestBalance = $.getdata($.LOWEST_BALANCE_KEY) || 5;
     $.desc = '请获取根据说明获取Cookie，点击前往';
     $.msg($.name, $.subt, $.desc, {
       'open-url':
-        'https://raw.githubusercontent.com/vox1207/Scripts/main/QuantumultX/10000/10000.cookie.js',
+        'https://raw.githubusercontent.com/id77/QuantumultX/master/task/10000.cookie.js',
     });
 
     $.done();
