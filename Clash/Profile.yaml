@@ -161,12 +161,6 @@ rule-providers:
     path: ./RuleSet/Streaming.yaml
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Streaming.yaml
     interval: 86400
-  StreamingSE:
-    type: http
-    behavior: classical
-    path: ./RuleSet/StreamingSE.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/StreamingSE.yaml
-    interval: 86400
   Global:
     type: http
     behavior: classical
