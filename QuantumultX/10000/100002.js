@@ -50,7 +50,6 @@ function showmsg() {
     console.log('电信余额提醒');
     console.log(JSON.stringify($.resData));
     console.log('====================================');
-    console.log($.resData));
     const balance = totalBalanceAvailable / 100;
 
     if ((paraFieldResult === '成功' || paraFieldResult === 'SUCCESS') && balance <= lowestBalance) {
@@ -66,7 +65,7 @@ function showmsg() {
     resolve();
   });
 }
-/*
+
 fetchUrl = {
     detail: 'https://e.189.cn/store/user/package_detail.do',
     balance: 'https://e.189.cn/store/user/balance_new.do',
