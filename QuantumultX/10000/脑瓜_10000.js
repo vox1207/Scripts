@@ -1,3 +1,4 @@
+/* cr from https://raw.githubusercontent.com/anker1209/Scriptable/main/scripts/ChinaTelecom_2021.js
 // Script: 2Ya & 脑瓜
 // 电报群：https://t.me/Scriptable_JS @anker1209
 // 该脚本小尺寸组件支持两种模式，默认为圆环进度条模式，主屏幕长按小组件-->编辑小组件-->Parameter，输入1，使用文字模式
