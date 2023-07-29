@@ -5,14 +5,14 @@
  * > task 设置每月执行一次即可
  * > 每月扣费前几天，比如1号扣费。10 12 25,1 * *；如果余额过低，将在25号&1号提醒
  *
- * hostname = e.189.cn
+ * hostname = e.189.cn, open.e.189.cn, e.dlife.cn
  *
  * # Surge
  * Rewrite: 电信余额提醒 = type=http-request,pattern=^https?:\/\/e\.189\.cn\/store\/user\/balance_new\.do,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/10000.cookie.js
  * Tasks: 电信余额提醒 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/10000.js,wake-system=true
  *
  * # QuanX
- * ^https?:\/\/e\.189\.cn\/store\/user\/balance_new\.do url script-request-header https://raw.githubusercontent.com/id77/QuantumultX/master/task/10000.cookie.js
+ * ^https?:\/\/e\.dlife\.cn\/user\/safe\/level\.do url script-request-header https://raw.githubusercontent.com/id77/QuantumultX/master/task/10000.cookie.js
  * 10 12 25,1 * * https://raw.githubusercontent.com/id77/QuantumultX/master/task/10000.js, tag=电信余额提醒, img-url=https://raw.githubusercontent.com/Orz-3/task/master/10000.png
  *
  * # Loon
