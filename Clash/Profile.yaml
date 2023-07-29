@@ -181,7 +181,6 @@ rules:
   - RULE-SET,OneDrive,DIRECT
   - RULE-SET,GoogleVoice,🇺🇸 US Auto
   - RULE-SET,Streaming,PROXY
-  - RULE-SET,StreamingSE,PROXY
   - RULE-SET,Global,PROXY
   - RULE-SET,China,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT
