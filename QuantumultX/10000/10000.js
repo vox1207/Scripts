@@ -8,6 +8,11 @@ $.SESSION_KEY = 'id77_10000_balanceReminder';
 $.LOWEST_BALANCE_KEY = 'id77_10000_lowestBalance';
 const lowestBalance = $.getdata($.LOWEST_BALANCE_KEY) || 5;
 
+fetchUrl = {
+    detail: 'https://e.189.cn/store/user/package_detail.do',
+    balance: 'https://e.189.cn/store/user/balance_new.do',
+  };
+
 !(async () => {
   if (!$.getdata($.SESSION_KEY)) {
     $.subt = '未找到Cookie';
