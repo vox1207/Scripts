@@ -8,11 +8,6 @@ $.SESSION_KEY = 'id77_10000_balanceReminder';
 $.LOWEST_BALANCE_KEY = 'id77_10000_lowestBalance';
 const lowestBalance = $.getdata($.LOWEST_BALANCE_KEY) || 5;
 
-fetchUrl = {
-    detail: 'https://e.189.cn/store/user/package_detail.do',
-    balance: 'https://e.189.cn/store/user/balance_new.do',
-  };
-
 !(async () => {
   if (!$.getdata($.SESSION_KEY)) {
     $.subt = '未找到Cookie';
@@ -55,6 +50,7 @@ function showmsg() {
     console.log('电信余额提醒');
     console.log(JSON.stringify($.resData));
     console.log('====================================');
+    console.log($.resData));
     const balance = totalBalanceAvailable / 100;
 
     if ((paraFieldResult === '成功' || paraFieldResult === 'SUCCESS') && balance <= lowestBalance) {
@@ -70,6 +66,79 @@ function showmsg() {
     resolve();
   });
 }
+/*
+fetchUrl = {
+    detail: 'https://e.189.cn/store/user/package_detail.do',
+    balance: 'https://e.189.cn/store/user/balance_new.do',
+  };
+
+async getData () {
+    const opts = {
+      headers: {'cookie': this.settings.cookie}
+    };
+    let url = this.fetchUrl.detail;
+    const detail = await this.httpGet(url, true, true, opts, 'POST');
+    url = this.fetchUrl.balance;
+    const balance = await this.httpGet(url, true, true, opts, 'POST');
+    
+    try{
+      if (detail.result === 0) {
+        // 套餐分钟数
+        if (detail.voiceBalance && detail.voiceAmount) {
+          this.formatVoice(Number(detail.voiceBalance), Number(detail.voiceAmount));
+        } else {
+          detail.items.forEach((data) => {
+            if (data.offerType == 21) {
+              data.items.forEach((item) => {
+                if (item.unitTypeId === '1') {
+                  if (item.ratableAmount !== '0' && item.balanceAmount !== '0') {
+                    this.formatVoice(Number(item.voiceBalance), Number(item.voiceAmount));
+                  }
+                }
+              })
+            }
+          })
+        }
+        // 流量套餐
+        let flows = [];
+        let flowName = [];
+        let index = 0;
+        detail.items.forEach((data) => {
+          data.items.forEach((item) => {
+            if (item.unitTypeId === '3') {
+              let flow = {};
+              let itemName = item.ratableAmount.length > 8 ? "无限流量" : item.ratableResourcename;
+              let idx = flowName.indexOf(itemName);
+              if(idx == -1){
+                flowName.push(itemName);
+                flow.itemName = itemName;
+                flow.total = Number(item.ratableAmount);
+                flow.used = Number(item.usageAmount);
+                flow.balance = Number(item.balanceAmount);
+                flows.push(flow);
+              } else {
+                flows[idx].total = flows[idx].total + Number(item.ratableAmount);
+                flows[idx].used = flows[idx].used + Number(item.usageAmount);
+                flows[idx].balance = flows[idx].balance + Number(item.balanceAmount);
+              }
+            }
+          })
+        })
+        this.settings.flows = flows;
+        
+        if (balance.result === 0) {
+      	  // 余额
+      	  this.fee.number = parseFloat(parseInt(balance.totalBalanceAvailable) / 100).toFixed(2);
+    	};
+      } else {
+        this.flow.FGColor = 'C4C4C4';
+        this.voice.FGColor = 'C4C4C4';
+        this.notify(this.name, '用户登录失败，cookie失效');
+      }
+    }catch(e){
+      this.ERROR.push({error:e.toString()});
+    }
+  };
 
 // https://github.com/chavyleung/scripts/blob/master/Env.js
 // prettier-ignore
