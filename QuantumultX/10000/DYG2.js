@@ -97,7 +97,7 @@ class Widget extends DJG {
     detail: 'https://e.189.cn/store/user/package_detail.do',
     balance: 'https://e.189.cn/store/user/balance_new.do',
   };
-  
+  /*
   // 小组件
   async renderSmall(widget){
     widget.setPadding(10, 10, 10, 10);
@@ -259,7 +259,7 @@ class Widget extends DJG {
 
     dataStack.addSpacer(15);
   }
-  
+  */
   getFlow(){
     let flow = {
       total: 0,
