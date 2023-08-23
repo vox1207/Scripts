@@ -1,6 +1,6 @@
-# U: https://raw.githubusercontent.com/Vaokgxi/Vox/main/QuantumultX/UnlockNetEaseCloudMusic.list
-# P: https://github.com/Vaokgxi/Vox/edit/main/QuantumultX/UnlockNetEaseCloudMusic.list
-# W: @Vox cr from @O7Y0
+# U: https://raw.githubusercontent.com/vox1207/Scripts/main/Clash/NetEaseMusic.list
+# P: https://github.com/vox1207/Scripts/edit/main/Clash/NetEaseMusic.list
+# W: @vox1207 cr from @O7Y0
 payload:
 # REJECT
   - DOMAIN,admusicpic.music.126.net
