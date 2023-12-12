@@ -107,22 +107,6 @@ proxy-groups:
       - EX
       - F1
       - F2
-  - name: 🎵 NetEaseMusic
-    proxies:
-      - DIRECT
-      - 🎶 URL TEST
-      - 🎧 网易音乐 0
-    use:
-      - NetEaseMusic
-    type: select
-  - name: 🎶 URL TEST
-    type: url-test
-    url: http://clientlog.music.163.com/
-    interval: 240
-    proxies:
-      - 🎧 网易音乐 0
-    use:
-      - NetEaseMusic
       
 rule-providers:
   Unbreak:
@@ -149,12 +133,6 @@ rule-providers:
     path: ./RuleSet/OneDrive.yaml
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Microsoft/OneDrive.yaml
     interval: 86400
-  NetEaseMusic:
-    type: http
-    behavior: classical
-    path: ./RuleSet/NetEaseMusic.yaml
-    url: https://raw.githubusercontent.com/Vaokgxi/Vox/main/Clash/NetEaseMusic.list
-    interval: 86400
   Streaming:
     type: http
     behavior: classical
@@ -177,9 +155,8 @@ rule-providers:
 rules:
   - RULE-SET,Unbreak,DIRECT
   - RULE-SET,Hijacking,REJECT
-  - RULE-SET,NetEaseMusic,🎵 NetEaseMusic
-  - RULE-SET,OneDrive,DIRECT
   - RULE-SET,GoogleVoice,🇺🇸 US Auto
+  - RULE-SET,OneDrive,DIRECT
   - RULE-SET,Streaming,PROXY
   - RULE-SET,Global,PROXY
   - RULE-SET,China,DIRECT
