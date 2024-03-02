@@ -50,7 +50,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - ♻ 🇭🇰 HK Auto
-      - 🏁 AI&OTS
+      - 🏁 EX
       - 1️⃣ F1 Auto
       - 2️⃣ F2 Auto
       - 🇺🇸 US Auto
@@ -61,7 +61,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - ♻ 🇭🇰 HK Auto
-      - 🏁 AI&OTS
+      - 🏁 EX
       - 1️⃣ F1 Auto
       - 2️⃣ F2 Auto
       - 🇺🇸 US Auto
@@ -95,7 +95,7 @@ proxy-groups:
     interval: 300
     use:
       - US 
-  - name: 🏁 AI&OTS
+  - name: 🏁 EX
     type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
