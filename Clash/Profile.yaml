@@ -51,8 +51,8 @@ proxy-groups:
       - DIRECT
       - 🇭🇰 HK Auto
       - 🇺🇸 US Auto
+      - 🌠 WARP Auto
       - 🏁 EX
-      - 🌠 WARP
       - 1️⃣ F1 Auto
       - 2️⃣ F2 Auto
 
@@ -64,8 +64,8 @@ proxy-groups:
       - DIRECT
       - 🇭🇰 HK Auto
       - 🇺🇸 US Auto
-      - 🏁 EX
       - 🌠 WARP Auto
+      - 🏁 EX
       - 1️⃣ F1 Auto
       - 2️⃣ F2 Auto
 
