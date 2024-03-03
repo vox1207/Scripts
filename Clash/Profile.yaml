@@ -52,7 +52,7 @@ proxy-groups:
       - 🇭🇰 HK Auto
       - 🇺🇸 US Auto
       - 🏁 EX
-      - 🌌☄🌠 WRAP
+      - 🌌☄🌠 WARP
       - 2️⃣ F2 Auto
       - 3️⃣ F3 Auto
 
@@ -65,7 +65,7 @@ proxy-groups:
       - 🇭🇰 HK Auto
       - 🇺🇸 US Auto
       - 🏁 EX
-      - 🌌☄🌠 WRAP Auto
+      - 🌌☄🌠 WARP Auto
       - 1️⃣ F1 Auto
       - 2️⃣ F2 Auto
 
@@ -81,7 +81,7 @@ proxy-groups:
     interval: 300
     use:
       - US 
-  - name: 🌌☄🌠 WRAP Auto
+  - name: 🌌☄🌠 WARP Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -111,12 +111,12 @@ proxy-groups:
     interval: 300
     proxies:
       - 🌍 EX Auto
-      - 🌌☄🌠 WRAP Auto
+      - 🌌☄🌠 WARP Auto
       - 1️⃣ F1 Auto
       - 2️⃣ F2 Auto
     use:
       - EX
-      - WRAP
+      - WARP
       - F1
       - F2
       
