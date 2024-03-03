@@ -49,34 +49,44 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - ♻ 🇭🇰 HK Auto
-      - 🏁 EX
-      - 1️⃣ F1 Auto
-      - 2️⃣ F2 Auto
+      - 🇭🇰 HK Auto
       - 🇺🇸 US Auto
+      - 🏁 EX
+      - 🌌☄🌠 WRAP
+      - 2️⃣ F2 Auto
+      - 3️⃣ F3 Auto
+
     use:
       - HK 
   - name: MATCH
     type: select
     proxies:
       - DIRECT
-      - ♻ 🇭🇰 HK Auto
+      - 🇭🇰 HK Auto
+      - 🇺🇸 US Auto
       - 🏁 EX
+      - 🌌☄🌠 WRAP Auto
       - 1️⃣ F1 Auto
       - 2️⃣ F2 Auto
-      - 🇺🇸 US Auto
-  - name: 🌍 EX Auto
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    use:
-      - EX
-  - name: ♻ 🇭🇰 HK Auto
+
+  - name: 🇭🇰 HK Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
       - HK
+  - name: 🇺🇸 US Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - US 
+  - name: 🌌☄🌠 WRAP Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - WRAP
   - name: 1️⃣ F1 Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -89,22 +99,24 @@ proxy-groups:
     interval: 300
     use:
       - F2  
-  - name: 🇺🇸 US Auto
+  - name: 🌍 EX Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - US 
+      - EX
   - name: 🏁 EX
     type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - 🌍 EX Auto
+      - 🌌☄🌠 WRAP Auto
       - 1️⃣ F1 Auto
       - 2️⃣ F2 Auto
     use:
       - EX
+      - WRAP
       - F1
       - F2
       
@@ -169,5 +181,7 @@ rules:
   - IP-CIDR,fe80::/10,DIRECT
   - IP-CIDR,119.28.28.28/32,DIRECT
   - IP-CIDR,182.254.116.0/24,DIRECT
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,MATCH
