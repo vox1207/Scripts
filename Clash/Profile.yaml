@@ -52,9 +52,6 @@ proxy-groups:
       - 🇭🇰 HK Auto
       - 🇺🇸 US Auto
       - 🏁 EX
-      - 1️⃣ F1 Auto
-      - 2️⃣ F2 Auto
-
     use:
       - HK 
   - name: MATCH
@@ -64,9 +61,6 @@ proxy-groups:
       - 🇭🇰 HK Auto
       - 🇺🇸 US Auto
       - 🏁 EX
-      - 1️⃣ F1 Auto
-      - 2️⃣ F2 Auto
-
   - name: 🇭🇰 HK Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -79,18 +73,6 @@ proxy-groups:
     interval: 300
     use:
       - US 
-  - name: 1️⃣ F1 Auto
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    use:
-      - F1
-  - name: 2️⃣ F2 Auto
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    use:
-      - F2  
   - name: 🌍 EX Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -103,12 +85,8 @@ proxy-groups:
     interval: 300
     proxies:
       - 🌍 EX Auto
-      - 1️⃣ F1 Auto
-      - 2️⃣ F2 Auto
     use:
       - EX
-      - F1
-      - F2
       
 rule-providers:
   Unbreak:
