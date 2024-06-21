@@ -103,7 +103,6 @@ proxy-groups:
     interval: 300
     proxies:
       - 🌍 EX Auto
-      - 🌠 WARP Auto
       - 1️⃣ F1 Auto
       - 2️⃣ F2 Auto
     use:
