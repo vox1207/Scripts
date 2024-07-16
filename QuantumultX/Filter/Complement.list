@@ -1,6 +1,9 @@
 # DIRECT
 # > Onenote
 #host-suffix, contentsync.onenote.com, direct
+# > Bitwarden
+host-keyword, bitwarden, direct
+
 
 # PROXY
 # > akwebguide
