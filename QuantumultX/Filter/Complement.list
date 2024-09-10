@@ -7,27 +7,27 @@ host-keyword, bitwarden, direct
 
 # PROXY
 # > akwebguide
-host-suffix, akwebguide.com, Static
+host-suffix, akwebguide.com, Filter
 # > APK Pure
-host-suffix, apkpure.com, Static
+host-suffix, apkpure.com, Filter
 # > Core77
-host-suffix, core77.com, Static
+host-suffix, core77.com, Filter
 # > Pinterest
-host-suffix, pinimg.com, Static
+host-suffix, pinimg.com, Filter
 # > Yanko Design
-host-suffix, yankodesign.com, Static
+host-suffix, yankodesign.com, Filter
 # > Headspace
-host-suffix, headspace.com, Static
+host-suffix, headspace.com, Filter
 # > Sketch-it!
-host-suffix, sketchitbr.gumroad.com, Static
+host-suffix, sketchitbr.gumroad.com, Filter
 # > Libgen
-host-suffix, libgen.rs, Static
-host-suffix, libgen.is, Static
-host-suffix, libgen.st, Static
+host-suffix, libgen.rs, Filter
+host-suffix, libgen.is, Filter
+host-suffix, libgen.st, Filter
 # > RSSHub
-host-suffix, rsshub.app, Static
+host-suffix, rsshub.app, Filter
 # > Google
-host-suffix, gstatic.com, Static
+host-suffix, gstatic.com, Filter
 
 # > Google Voice
 #host-suffix, googleapis.com, 🇺🇸 US
@@ -38,7 +38,7 @@ host-suffix, notion.so, Notion
 # > OpenAI
 host-suffix, openai.com, 🏁 OTS
 # > 毒奶
-host-suffix, limbopro.com, Static
+host-suffix, limbopro.com, Filter
 
 # REJECT
 # > NetEaseCloudMusic
