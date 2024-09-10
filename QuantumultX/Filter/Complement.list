@@ -28,6 +28,8 @@ host-suffix, libgen.st, Filter
 host-suffix, rsshub.app, Filter
 # > Google
 host-suffix, gstatic.com, Filter
+# > Volcom
+host-suffix, volcom.com, Filter
 
 # > Google Voice
 #host-suffix, googleapis.com, 🇺🇸 US
