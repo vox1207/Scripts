@@ -27,7 +27,7 @@ host-suffix, libgen.st, Filter
 # > RSSHub
 host-suffix, rsshub.app, Filter
 # > Google
-host-suffix, gstatic.com, Filter
+host-keyword, encrypted-tbn, Filter
 # > Volcom
 host-suffix, volcom.com, Filter
 
@@ -39,6 +39,8 @@ host-suffix, notion.so, Notion
 
 # > OpenAI
 host-suffix, openai.com, 🏁 OTS
+host-suffix, chatgpt.com, 🏁 OTS
+
 # > 毒奶
 host-suffix, limbopro.com, Filter
 
