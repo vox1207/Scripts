@@ -1,2 +1,0 @@
-proxies:
-  - {name: "🇭🇰 [直连]香港动态 HKT A", server: hktactivc-e.onlineqitv-ns.xyz, port: 543, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: 42836:zjh_333, obfs-param: ""
