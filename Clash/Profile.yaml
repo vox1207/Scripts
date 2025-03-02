@@ -51,7 +51,7 @@ proxy-groups:
       - DIRECT
       - 🇭🇰 HK Auto
       - 🇺🇸 US Auto
-      - 🏁 EX
+      - 🚩 OTS
     use:
       - HK 
   - name: MATCH
@@ -60,7 +60,7 @@ proxy-groups:
       - DIRECT
       - 🇭🇰 HK Auto
       - 🇺🇸 US Auto
-      - 🏁 EX
+      - 🚩 OTS
   - name: 🇭🇰 HK Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -73,20 +73,20 @@ proxy-groups:
     interval: 300
     use:
       - US 
-  - name: 🌍 EX Auto
+  - name: 🌍 OTS Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - EX
-  - name: 🏁 EX
+      - OTS
+  - name: 🚩 OTS
     type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🌍 EX Auto
+      - 🌍 OTS Auto
     use:
-      - EX
+      - OTS
       
 rule-providers:
   Unbreak:
