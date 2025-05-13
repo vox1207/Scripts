@@ -9,11 +9,11 @@ host-keyword, bitwarden, direct
 # > akwebguide
 host-suffix, akwebguide.com, Filter
 # > APK Pure
-host-suffix, apkpure.com, Filter
+#host-suffix, apkpure.com, Filter
 # > Core77
 host-suffix, core77.com, Filter
 # > Pinterest
-host-suffix, pinimg.com, Filter
+#host-suffix, pinimg.com, Filter
 # > Yanko Design
 host-suffix, yankodesign.com, Filter
 # > Headspace
@@ -25,7 +25,7 @@ host-suffix, libgen.rs, Filter
 host-suffix, libgen.is, Filter
 host-suffix, libgen.st, Filter
 # > RSSHub
-host-suffix, rsshub.app, Filter
+#host-suffix, rsshub.app, Filter
 # > Google
 host-keyword, encrypted-tbn, Filter
 # > Volcom
