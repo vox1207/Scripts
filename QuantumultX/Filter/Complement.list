@@ -26,14 +26,8 @@ host-suffix, libgen.st, Filter
 host-keyword, encrypted-tbn, Filter
 # > Volcom
 host-suffix, volcom.com, Filter
-
-# > Google Voice
-#host-suffix, googleapis.com, 🇺🇸 US
-
-# > Notion
-host-suffix, notion.so, Notion
-host-suffix,prod-files-secure.*.amazonaws.com,Filter
-
+# > IPTV
+host, tv.iill.top, Filter
 # > 毒奶
 host-suffix, limbopro.com, Filter
 
