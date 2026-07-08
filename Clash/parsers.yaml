@@ -1,0 +1,119 @@
+parsers: # array
+  - url: https://link123.52pokemon99.cc/api/v1/client/subscribe?token=c881cc183864ee83794819ef03316f83
+    yaml:
+      dns:
+        enable: true
+        use-hosts: true  
+      hosts:
+        119.28.13.121 app.notion.com
+        119.28.13.121 img.notionusercontent.com
+        119.28.13.121 msgstore-002.app.notion.com
+        119.28.13.121 identity.notion.com
+        119.28.13.121 exp.notion.com
+        119.28.13.121 audioprocessor.app.notion.com
+      append-proxies:
+          - {name: "🇬🇧 [边缘] 英国", server: e.eu.ltltltltltltlt.top, port: 17063, type: ss, cipher: aes-128-gcm, password: 581b3658-3d05-422f-ba9a-1cd9679dfdd9, tfo: false}
+      prepend-proxy-groups:
+          - { name: MATCH, type: select, proxies: [DIRECT, 宝可梦, '🇬🇧 [边缘] 英国'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+          - { name: PROXY, type: select, proxies: [DIRECT, 宝可梦, '🇬🇧 [边缘] 英国'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+      commands:
+        - proxy-groups.2.proxies.2- 
+        - proxy-groups.2.proxies.2- 
+        - proxy-groups.2.proxies.2- 
+        - proxy-groups.2.proxies.2-
+        - proxy-groups.2.proxies.2- 
+        - proxy-groups.2.proxies.2-
+        - proxy-groups.3.proxies.0- 
+        - proxy-groups.3.proxies.0- 
+        - proxy-groups.3.proxies.0- 
+        - proxy-groups.3.proxies.0-
+        - proxy-groups.3.proxies.0- 
+        - proxy-groups.3.proxies.0-
+        - proxy-groups.4.proxies.0- 
+        - proxy-groups.4.proxies.0- 
+        - proxy-groups.4.proxies.0- 
+        - proxy-groups.4.proxies.0-
+        - proxy-groups.4.proxies.0- 
+        - proxy-groups.4.proxies.0- 
+      mix-rule-providers:
+        Unbreak:
+          type: http
+          behavior: classical
+          path: ./RuleSet/Unbreak.yaml
+          url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
+          interval: 86400
+        Hijacking:
+          type: http
+          behavior: classical
+          path: ./RuleSet/Hijacking.yaml
+          url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Guard/Hijacking.yaml
+          interval: 86400
+        GoogleVoice:
+          type: http
+          behavior: classical
+          path: ./RuleSet/GoogleVoice.yaml
+          url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Google/GoogleVoice.yaml
+          interval: 86400
+        OneDrive:
+          type: http
+          behavior: classical
+          path: ./RuleSet/OneDrive.yaml
+          url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Microsoft/OneDrive.yaml
+          interval: 86400
+        Streaming:
+          type: http
+          behavior: classical
+          path: ./RuleSet/Streaming.yaml
+          url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Streaming.yaml
+          interval: 86400
+        Global:
+          type: http
+          behavior: classical
+          path: ./RuleSet/Global.yaml
+          url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Global.yaml
+          interval: 86400
+        China:
+          type: http
+          behavior: classical
+          path: ./RuleSet/China.yaml
+          url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
+          interval: 86400
+      prepend-rules:
+        - DOMAIN-KEYWORD,bitwarden,DIRECT
+        - DOMAIN-KEYWORD,woaimoon,DIRECT
+
+        - DOMAIN-SUFFIX,icons8.com,宝可梦
+        - DOMAIN-SUFFIX,cyberhostvpn.com,宝可梦
+        - DOMAIN-SUFFIX,apptopia.com,宝可梦
+        - DOMAIN-SUFFIX,libgen.st,宝可梦
+        - DOMAIN-SUFFIX,sssoou.com,宝可梦
+        - DOMAIN-SUFFIX,starstyleman.com,宝可梦
+        - DOMAIN-SUFFIX,zlibrary-china.se,宝可梦
+        - DOMAIN-SUFFIX,artbreeder.com,宝可梦
+        - DOMAIN-KEYWORD,encrypted-tbn,宝可梦
+        - DOMAIN-KEYWORD,greasyfork.org,宝可梦
+        
+        - DOMAIN-SUFFIX,chatgpt.com,宝可梦
+        - DOMAIN-SUFFIX,openai.com,宝可梦
+        - DOMAIN-SUFFIX,prod-files-secure.*.amazonaws.com,宝可梦
+        
+        - RULE-SET,Unbreak,DIRECT
+        - RULE-SET,Hijacking,REJECT
+        - RULE-SET,GoogleVoice,宝可梦
+        - RULE-SET,OneDrive,DIRECT
+        - RULE-SET,Streaming,宝可梦
+        - RULE-SET,Global,宝可梦
+        - RULE-SET,China,DIRECT
+        - IP-CIDR,192.168.0.0/16,DIRECT
+        - IP-CIDR,10.0.0.0/8,DIRECT
+        - IP-CIDR,172.16.0.0/12,DIRECT
+        - IP-CIDR,127.0.0.0/8,DIRECT
+        - IP-CIDR,100.64.0.0/10,DIRECT
+        - IP-CIDR,224.0.0.0/4,DIRECT
+        - IP-CIDR,fe80::/10,DIRECT
+        - IP-CIDR,119.28.28.28/32,DIRECT
+        - IP-CIDR,182.254.116.0/24,DIRECT
+        - DOMAIN-SUFFIX,cn,DIRECT
+        - DOMAIN-KEYWORD,-cn,DIRECT
+        - GEOIP,CN,DIRECT
+        - MATCH,MATCH
