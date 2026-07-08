@@ -28,6 +28,8 @@ host-keyword, encrypted-tbn, Filter
 host-suffix, volcom.com, Filter
 # > IPTV
 host, tv.iill.top, Filter
+# > 宝可梦
+host, love.p6m6.com, Filter
 # > 毒奶
 host-suffix, limbopro.com, Filter
 
