@@ -202,6 +202,7 @@ rule-providers:
     path: ./ruleset/applications.yaml
     interval: 86400  
 rules:
+  - DOMAIN,love.p6m6.com,PROXY
   - DOMAIN,linux.do,PROXY
 
   - RULE-SET,applications,DIRECT
